@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+<meta name="google-site-verification" content="b1Q71H_k_VlN698T1nCTW9iobzfmbZw_lGAF9upTxTA" />
+<meta name="keywords" content="afsdiscount,afs discount link,afspromocode,afs,afs academic program,afs2025,ACS Future School Teacher Panel"/>
+<meta name="description" content="ACS Future School এর একাডেমিক প্রোগ্রাম ২০২৫ সম্পর্কে বিস্তারিত জানুন","বাংলাদেশে একাডেমিক প্রোগ্রাম"
+২০২৫ সালের একাডেমিক কোর্স", "সেরা শিক্ষা প্ল্যাটফর্ম বাংলাদেশ"
+ বেস্ট অনলাইন লার্নিং
+বাংলাদেশে অনলাইন স্কুল কেমন?" "কোন অনলাইন স্কুল ভালো?"/>
+    <link rel="icon" type="image/webp" href="acs-courses-Icon.webp">
+    <title>ACS Future School - একাডেমিক প্রোগ্রাম ২০২৫</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        .background {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, #6a11cb, #2575fc);
+            z-index: -1;
+        }
+
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            animation: floatUp 10s infinite ease-in-out;
+        }
+
+        .bubble:nth-child(1) { left: 20%; width: 80px; height: 80px; animation-duration: 12s; }
+        .bubble:nth-child(2) { left: 40%; width: 60px; height: 60px; animation-duration: 10s; }
+        .bubble:nth-child(3) { left: 60%; width: 100px; height: 100px; animation-duration: 14s; }
+        .bubble:nth-child(4) { left: 80%; width: 40px; height: 40px; animation-duration: 8s; }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) scale(1); opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-120vh) scale(0.8); opacity: 0; }
+        }
+
+        .container {
+            text-align: center;
+            color: #fff;
+            padding: 15px;
+        }
+
+        .logo {
+            width: 65px;
+        }
+
+        .headline {
+            font-size: 36px;
+            margin: 20px 0;
+        }
+
+        .video-container iframe {
+            width: 320px;
+            height: 180px;
+            border-radius: 10px;
+        }
+
+        .courses {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 15px 10px;
+            margin: 20px 0;
+        }
+
+        .course {
+            background: #33c1ff;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            flex: 0 0 auto;
+            width: 250px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .course:nth-child(even) { background: #8bc34a; }
+
+        .btn {
+            margin-top: 10px;
+            padding: 10px;
+            background: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover { background: #e64a19; }
+
+        /* Promo Page */
+        #promo-page {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        #promo-page p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        #promo-page button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #promo-page button:hover {
+            background: #0056b3;
+        }
+
+        .contact, .whatsapp {
+            margin-top: 20px;
+        }
+
+        .whatsapp img {
+            width: 30px;
+            margin-right: 5px;
+        }
+
+        .whatsapp a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            background: #25d366;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .whatsapp a:hover {
+            background: #128c7e;
+        }
+
+        /* New Animation for Promo Page */
+        .discount-animation {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ff5722;
+            opacity: 0;
+            animation: showDiscount 7s forwards;
+        }
+
+        @keyframes showDiscount {
+            0% { opacity: 0; }
+            25% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+            75% { opacity: 0.9; }
+            100% { opacity: 1; }
+        }
+
+        .discount-number {
+            display: inline-block;
+            font-size: 48px;
+            opacity: 0;
+            animation: countUp 5s forwards;
+        }
+
+        @keyframes countUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; }
+        .slider-container { overflow: hidden; width: 100%; background: #f5f5f5; padding: 20px; }
+        .slider { display: flex; width: max-content; animation: scroll 17s linear infinite; }
+        .teacher-card { width: 200px; margin: 10px; padding: 10px; background: white; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); text-align: center; border-radius: 10px; }
+        .teacher-card img { width: 100%; height: auto; border-radius: 50%; }
+        .teacher-card h3 { margin: 10px 0 5px; font-size: 18px; }
+        .teacher-card p { font-size: 14px; color: gray; }
+        
+        @keyframes scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-float img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+</style>
+    <title>কোর্স সম্পর্কিত প্রশ্নাবলী</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0px;
+        }
+        .faq {
+            max-width: 600px;
+            margin: auto;
+        }
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .question {
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .answer {
+            display: none;
+            padding-top: 5px;
+        }
+    </style>
+    </style>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5YL3WSEFE0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5YL3WSEFE0');
+</script>
+<body onclick="closePromo(event)">
+    <div class="background">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+    <div class="container">
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/ACS_Future_School_logo_photo.webp" alt="ACS Future School"><p> গড়ছি আগামীর বাংলাদেশ</p>
+        <h1 class="headline">ACS Future School একাডেমিক প্রোগ্রাম ২০২৫</h1>
+
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/vv2zHp82oFw" allowfullscreen></iframe>
+        </div>
+<h2 align="center">AFS Discount Link || AFSPromocode</h2>
+        <div class="courses">
+            <div class="course">
+                <h3>৬ষ্ঠ শ্রেণি</h3>
+                <a href="https://cutt.ly/irwcPGej" class="btn">ভর্তি হও</a>
+                <button class="btn" onclick="showPromo(event)">প্রোমো কোড দেখুন</button>
+            </div>
+            <div class="course">
+                <h3>৭ম শ্রেণি</h3>
+                <a href="https://cutt.ly/arwcOWQs" class="btn">ভর্তি হও</a>
+                <button class="btn" onclick="showPromo(event)">প্রোমো কোড দেখুন</button>
+            </div>
+            <div class="course">
+                <h3>৮ম শ্রেণি</h3>
+                <a href="https://cutt.ly/ErwcI2Wk" class="btn">ভর্তি হও</a>
+                <button class="btn" onclick="showPromo(event)">প্রোমো কোড দেখুন</button>
+            </div>
+            <div class="course">
+                <h3>৯ম শ্রেণি</h3>
+                <a href="https://cutt.ly/krwcIsyb" class="btn">ভর্তি হও</a>
+                <button class="btn" onclick="showPromo(event)">প্রোমো কোড দেখুন</button>
+            </div>
+            <div class="course">
+                <h3>১০ম শ্রেণি</h3>
+                <a href="https://cutt.ly/BrwcRUu5" class="btn">ভর্তি হও</a>
+                <button class="btn" onclick="showPromo(event)">প্রোমো কোড দেখুন</button>
+            </div>       
+            <div class="course">
+                <h3>ব্যবসা ও মানবিক বিভাগ</h3>
+                <a href="https://cutt.ly/VrwcJaa6" class="btn">নবম শ্রেণী</a>
+<a href="https://cutt.ly/wrwcKwhe"class="btn">দশম শ্রেণী</a>
+
+                <button class="btn" onclick="showPromo(event)">প্রোমো কোড দেখুন</button>
+            </div>
+</div>
+        <div class="contact">
+            <h3>যোগাযোগ করুন:</h3>
+            <p>📞 +8801778682815</p>
+        </div>
+
+        <div class="whatsapp">
+            <a href="https://wa.me/8801778682815">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                WhatsApp-এ যোগাযোগ করুন
+            </a>
+        </div>
+    </div>
+<h3 align="center">ACS Future School Teacher Panel</h3>
+    <div id="promo-page" onclick="event.stopPropagation()">
+        <p>প্রোমো কোড:</p>
+        <p class="discount-animation">আপনি পাচ্ছেন <span class="discount-number">40%</span>পর্যন্ত ছাড়!</p>
+        <p>(<u>আপাতত কোনো প্রোমো কোড নাই</u>,
+আপনি লিংক(ভর্তি হও) থেকে ভর্তি হলেই ডিসকাউন্ট পেয়ে যাবেন।)</p>
+        <strong>AFFEB</strong>
+        <button onclick="copyPromo()">কপি করুন</button>
+    </div>
+<div class="slider-container">
+        <div class="slider">
+            <div class="teacher-card">
+                <img src="rakib.webp" alt="শিক্ষক ১">
+                <h3>Kazi Rakibul Hasan</h3>
+                <p>গণিত শিক্ষক</p>
+            </div>
+            <div class="teacher-card">
+                <img src="abida.webp" alt="শিক্ষক ২">
+                <h3>Abida</h3>
+                <p>বাংলা শিক্ষক</p>
+            </div>
+            <div class="teacher-card">
+                <img src="mashrur.webp" alt="শিক্ষক ৩">
+                <h3>Mashrur</h3>
+                <p>পদার্থবিজ্ঞান শিক্ষক</p>
+            </div>
+            <div class="teacher-card">
+                <img src="dipit.webp" alt="শিক্ষক ৪">
+                <h3>Dipit Saha</h3>
+                <p>পদার্থবিজ্ঞান শিক্ষক</p>
+            </div>
+<div class="teacher-card">
+                <img src="omio.webp" alt="শিক্ষক ৫">
+                <h3>Omio</h3>
+                <p>গণিত শিক্ষক</p>
+            </div>
+<div class="teacher-card">
+                <img src="tandra.webp" alt="শিক্ষক ৬">
+                <h3>Fariha</h3>
+                <p>জীববিজ্ঞান শিক্ষক</p>
+            </div>
+<div class="teacher-card">
+                <img src="omor.webp" alt="শিক্ষক ৭">
+                <h3>Omor</h3>
+                <p>ইংরেজি শিক্ষক</p>
+            </div>
+<div class="teacher-card">
+                <img src="ahona.webp" alt="শিক্ষক ৮">
+                <h3>Ahona</h3>
+                <p>জীববিজ্ঞান শিক্ষক</p>
+            </div>
+<div class="teacher-card">
+                <img src="tashmiya.webp" alt="শিক্ষক ৯">
+                <h3>Tashmiya</h3>
+                <p>শিক্ষক</p>
+            </div>
+<div class="teacher-card">
+                <img src="shadman.webp" alt="শিক্ষক ১০">
+                <h3>Shadman</h3>
+                <p>পদার্থবিজ্ঞান শিক্ষক</p>
+            </div>
+<div class="teacher-card">
+                <img src="rayan.webp" alt="শিক্ষক ১১">
+                <h3>Rayan</h3>
+                <p>রসায়ন শিক্ষক</p>
+            </div>
+<div class="teacher-card">
+                <img src="nova.webp" alt="শিক্ষক ১২">
+                <h3>Nova</h3>
+                <p>গণিত শিক্ষক</p>
+            </div>
+</div>
+</div>
+<a href="https://wa.me/8801778682815" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
+<h2 align="center">কোর্স সম্পর্কিত প্রশ্নাবলী</h2>
+<p align="center">কোর্স সম্পর্কিত প্রশ্ন তোমাকে সঠিক সিদ্ধান্ত নিতে সাহায্য করবে
+"AFS Academic Program"</p>
+<div class="faq">
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">
+                ১. কোর্সটি কীভাবে কিনবো?
+                <span>▼</span>
+            </div>
+            <div class="answer">কোর্সটি কেনার জন্য “ভর্তি হও” বাটনে ক্লিক করো। যদি ওয়েবসাইটে লগইন করা না থাকে, তাহলে লগইন সম্পন্ন করে পুনরায় “ভর্তি হও” বাটনে ক্লিক করে পরবর্তী নির্দেশনা অনুসরণ করো।</div>
+        </div>
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">
+                ২. ক্লাস কবে থেকে শুরু হবে?
+                <span>▼</span>
+            </div>
+            <div class="answer">ক্লাসগুলো ১০ জানুয়ারি ২০২৫ থেকে শুরু হবে।</div>
+        </div>
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">
+                ৩. ক্লাসগুলো কিভাবে হবে?
+                <span>▼</span>
+            </div>
+            <div class="answer">ক্লাসগুলো হবে আমাদের এপ এবং ওয়েবসাইটে। এছাড়াও রেকর্ডেড ক্লাস, নোটস এবং কুইজ পাওয়া যাবে ওয়েবসাইট এবং এপ থেকেই।</div>
+        </div>
+    </div>
+<div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">
+                ৪. কোর্স ফি কিভাবে পরিশোধ করবো?
+                <span>▼</span>
+            </div>
+            <div class="answer">কোর্স ফি পরিশোধের জন্য ওয়েবসাইটে অনলাইন পেমেন্ট গেটওয়ে ব্যবহার করতে পারবে। আমরা বিকাশ, নগদ, রকেটসহ বিভিন্ন Mobile Banking Service এবং ক্রেডিট/ডেবিট কার্ডের মাধ্যমে পেমেন্ট গ্রহণ করি। এমনকি ক্রেডিট কার্ডের মাধ্যমে EMI সুবিধাও রয়েছে।</div>
+        </div>
+    </div>
+<div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">
+                ৫. লাইভ ক্লাসে না থাকতে পারলে কী হবে?
+                <span>▼</span>
+            </div>
+            <div class="answer">লাইভ ক্লাসে থাকতে না পারলে, ক্লাসের রেকর্ডিংও ওয়েবসাইটে দেখতে পারবে।</div>
+        </div>
+    </div>
+<div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">
+                ৬. কোর্স বাতিল বা রিফান্ড করা সম্ভব কি?
+                <span>▼</span>
+            </div>
+            <div class="answer">কোর্স কেনার পর তা বাতিল করা বা রিফান্ড নেওয়া সম্ভব নয়। তাই কেনার আগে নিশ্চিত হয়ে এনরোল করো।</div>
+        </div>
+    </div>
+<div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">
+                ৭. একটি কোর্স কেনার পর কতোদিন পর্যন্ত অ্যাক্সেস থাকবে?
+                <span>▼</span>
+            </div>
+            <div class="answer">তোমার কেনা প্যাকেজের ধরণ অনুযায়ী ১ মাস, ৩ মাস, ৬ মাস কিংবা ১ বছর পর্যন্ত অ্যাক্সেস থাকবে।</div>
+        </div>
+    </div>
+<script>
+        function toggleAnswer(element) {
+            let answer = element.nextElementSibling;
+            let icon = element.querySelector("span");
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                icon.textContent = "▼";
+            } else {
+                answer.style.display = "block";
+                icon.textContent = "▲";
+            }
+        }
+    </script>
+    <script>
+        function showPromo(event) {
+            event.stopPropagation();
+            document.getElementById("promo-page").style.display = "block";
+            setTimeout(function() {
+                document.querySelector(".discount-number").textContent = "40%";
+            }, 2000); // after 2 seconds, display the discount value
+        }
+
+        function closePromo(event) {
+            if (event.target.id !== "promo-page") {
+                document.getElementById("promo-page").style.display = "none";
+            }
+        }
+
+        function copyPromo() {
+            navigator.clipboard.writeText("AFFEB");
+            alert("প্রোমো কোড কপি করা হয়েছে!");
+        }
+    </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let slider = document.querySelector(".slider");
+    let clone = slider.innerHTML; // স্লাইডারের কনটেন্ট ক্লোন করা
+    slider.innerHTML += clone; // একই কনটেন্ট কপি করা যাতে লুপ ঠিকমতো চলে
+
+    let scrollAmount = 0; // স্ক্রল ট্র্যাক রাখার জন্য
+    function autoScroll() {
+        scrollAmount -= 1; // বাম দিকে স্ক্রল হবে
+        slider.style.transform = `translateX(${scrollAmount}px)`;
+
+        if (Math.abs(scrollAmount) >= slider.scrollWidth / 2) {
+            scrollAmount = 0; // স্ক্রল একবার শেষ হলে রিস্টার্ট করবে
+        }
+
+        requestAnimationFrame(autoScroll);
+    }
+
+    autoScroll();
+});
+
+    
+</script>
+</body>
+</html>
