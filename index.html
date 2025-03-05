@@ -11,6 +11,115 @@
 বাংলাদেশে অনলাইন স্কুল কেমন?" "কোন অনলাইন স্কুল ভালো?"/>
     <link rel="icon" type="image/webp" href="acs-courses-Icon.webp">
     <title>ACS Future School - একাডেমিক প্রোগ্রাম ২০২৫</title>
+<style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #333;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar h2 {
+            color: white;
+            margin: 0;
+        }
+
+        /* Desktop Menu */
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-size: 18px;
+        }
+
+        .nav-links a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        /* Hamburger Icon (Shifted to the Left) */
+        .menu-icon {
+            display: none;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            cursor: pointer;
+        }
+
+        .menu-icon div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            margin: 5px 0;
+        }
+
+        /* Sidebar Menu (Mobile) */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Hidden by default */
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            padding-top: 60px;
+            transition: left 0.4s;
+            z-index: 999;
+        }
+
+        .side-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-size: 18px;
+        }
+
+        .side-menu a:hover {
+            background-color: #575757;
+        }
+
+        /* Close Button */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Show Menu */
+        .side-menu.active {
+            left: 0;
+        }
+
+        /* Responsive for Mobile */
+        @media (max-width: 767px) {
+            .nav-links {
+                display: none;
+            }
+            .menu-icon {
+                display: block;
+            }
+        }
+    </style>
     <style>
         body, html {
             margin: 0;
@@ -250,6 +359,37 @@
   gtag('config', 'G-5YL3WSEFE0');
 </script>
 <body onclick="closePromo(event)">
+<!-- Navbar -->
+    <div class="navbar">
+        <h2>ACS Courses</h2>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- Sidebar Menu (Mobile) -->
+    <div class="side-menu" id="sideMenu">
+        <span class="close-btn" onclick="toggleMenu()">✖</span>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("sideMenu");
+            menu.classList.toggle("active");
+        }
+    </script>
     <div class="background">
         <div class="bubble"></div>
         <div class="bubble"></div>
