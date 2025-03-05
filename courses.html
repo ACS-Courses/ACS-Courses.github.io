@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="১ম থেকে ৬ষ্ঠ শ্রেণির জন্য ডিসকাউন্ট সহ অনলাইন কোর্স। সেরা শিক্ষকদের সাথে শেখার সুযোগ নিন!">
+    <title>একাডেমিক প্রোগ্রাম | ডিসকাউন্ট অফার</title>
+    <style>
+        /* সাধারণ স্টাইল */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+        }
+        .grade-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .grade {
+            width: 300px;
+            margin: 15px;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+        .grade:nth-child(1) { animation-delay: 0.2s; }
+        .grade:nth-child(2) { animation-delay: 0.4s; }
+        .grade:nth-child(3) { animation-delay: 0.6s; }
+        .grade:nth-child(4) { animation-delay: 0.8s; }
+        .grade:nth-child(5) { animation-delay: 1s; }
+        .grade:nth-child(6) { animation-delay: 1.2s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .grade img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        p {
+            font-size: 16px;
+            color: #333;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 15px;
+            background: #343a40;
+            color: white;
+        }
+        footer a {
+            color: #f8f9fa;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2><img src="Picsart_24-12-27_21-24-11-024.webp" width="50" height="auto" alt="ACS Future School">
+        একাডেমিক প্রোগ্রাম ২০২৫</h2>
+    </header>
+
+    <section class="grade-container">
+        <!-- ৬ষ্ঠ শ্রেণি -->
+        <div class="grade">
+            <a href="https://acsfs.com/0sWm6">
+                <img src="IMG-20250306-WA0005.jpg" alt="৬ষ্ঠ শ্রেণি অনলাইন কোর্স">
+            </a>
+            <p>৬ষ্ঠ শ্রেণির অনলাইন ব্যাচে <strong>২০% ডিসকাউন্ট</strong> চলছে! আজই ভর্তি হন।</p>
+        </div>
+
+        <!-- ৭ম শ্রেণি -->
+        <div class="grade">
+            <a href="https://acsfs.com/nsWQP">
+                <img src="IMG-20250306-WA0004.jpg" alt="৭ম শ্রেণি অনলাইন কোর্স">
+            </a>
+            <p>৭ম শ্রেণির শিক্ষার্থীদের জন্য <strong>বিশেষ ছাড়</strong> অফার!</p>
+        </div>
+
+        <!-- ৮ম শ্রেণি -->
+        <div class="grade">
+            <a href="https://acsfs.com/5sWn7">
+                <img src="Class-8.jpg" alt="৮ম শ্রেণি অনলাইন কোর্স">
+            </a>
+            <p>৮ম শ্রেণির কোর্সে <strong>৪০% পর্যন্ত ছাড়</strong> পাওয়া যাচ্ছে!</p>
+        </div>
+
+        <!-- ৯ম শ্রেণি -->
+        <div class="grade">
+            <a href="https://acsfs.com/tsWb1">
+                <img src="Class-9.jpg" alt="৯ম শ্রেণি অনলাইন কোর্স">
+            </a>
+            <p>৯ম শ্রেণির শিক্ষার্থীদের জন্য <strong>সেরা মূল্যছাড়</strong> প্রযোজ্য!</p>
+        </div>
+
+        <!-- ১০ম শ্রেণি -->
+        <div class="grade">
+            <a href="https://acsfs.com/osWvA">
+                <img src="Class-10.jpg" alt="১০ম শ্রেণি অনলাইন কোর্স">
+            </a>
+            <p>১০ম শ্রেণির স্টুডেন্টদের জন্য <strong>স্পেশাল ডিসকাউন্ট</strong>!</p>
+        </div>
+    </section>
+
+    <footer>
+        <a href="about.html">About</a> | 
+        <a href="privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
