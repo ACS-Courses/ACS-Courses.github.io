@@ -1,0 +1,14 @@
+# Allow all robots complete access
+User-agent: *
+Disallow:
+
+# Block specific robots
+User-agent: BadBot
+Disallow: /
+
+# Allow Googlebot full access (this is the default behavior, so it's optional)
+User-agent: Googlebot
+Disallow:
+
+# Sitemap location
+Sitemap: https://www.yoursite.com/sitemap.xml
