@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>৯-১০ম শ্রেণির কুইজ - পরীক্ষা দিন</title>
+    <meta name="description" content="৯-১০ম শ্রেণির শিক্ষার্থীদের জন্য বিশেষ কুইজ। ১০টি প্রশ্নের উত্তর দিন এবং আপনার স্কোর দেখুন!">
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background: #f4f4f4; padding: 20px; }
+        #quiz-container { background: #fff; padding: 20px; max-width: 600px; margin: auto; border-radius: 8px; box-shadow: 0px 0px 10px #ccc; }
+        .question { font-size: 18px; margin-bottom: 10px; }
+        .option { display: block; background: #ddd; padding: 10px; margin: 5px; cursor: pointer; border-radius: 5px; }
+        .option:hover { background: #bbb; }
+        #timer { font-size: 20px; color: red; margin-bottom: 20px; }
+        #result { font-size: 22px; font-weight: bold; margin-top: 20px; }
+        #start-again, #submit-score { margin-top: 10px; padding: 10px; background: #007BFF; color: white; border: none; cursor: pointer; border-radius: 5px; }
+        #start-again:hover, #submit-score:hover { background: #0056b3; }
+        #leaderboard { margin-top: 20px; text-align: left; background: #fff; padding: 10px; border-radius: 8px; max-width: 400px; margin: auto; box-shadow: 0px 0px 5px #ccc; }
+    </style>
+</head>
+<body>
+
+    <div id="quiz-container">
+        <h2>৯-১০ম শ্রেণির কুইজ</h2>
+        <div id="timer">সময়: 10:00</div>
+        <div id="quiz"></div>
+        <div id="result"></div>
+        <button id="submit-score" style="display: none;" onclick="submitScore()">স্কোর জমা দিন</button>
+        <button id="start-again" onclick="location.reload()">পুনরায় শুরু করুন</button>
+    </div>
+
+    <div id="leaderboard"></div>
+
+    <script>
+        const questions = [
+            { question: "মুক্তিযুদ্ধ শুরু হয় কোন সালে?", options: ["১৯৬৫", "১৯৭১", "১৯৫২", "১৯৮৮"], answer: "১৯৭১" },
+            { question: "বাংলাদেশের প্রথম রাজধানী কোনটি ছিল?", options: ["ঢাকা", "চট্টগ্রাম", "মুজিবনগর", "রাজশাহী"], answer: "মুজিবনগর" },
+            { question: "জ্যামিতিতে পাই (π) এর মান কত?", options: ["৩.১৪", "২.৭১", "১.৬১৮", "১.৪১৪"], answer: "৩.১৪" },
+            { question: "'কপালকুণ্ডলা' উপন্যাসের লেখক কে?", options: ["বঙ্কিমচন্দ্র চট্টোপাধ্যায়", "রবীন্দ্রনাথ ঠাকুর", "মাইকেল মধুসূদন দত্ত", "শরৎচন্দ্র চট্টোপাধ্যায়"], answer: "বঙ্কিমচন্দ্র চট্টোপাধ্যায়" },
+            { question: "নিউটনের গতিসূত্র কয়টি?", options: ["১টি", "২টি", "৩টি", "৪টি"], answer: "৩টি" },
+            { question: "বাংলাদেশের জাতীয় ফল কোনটি?", options: ["কাঁঠাল", "আম", "লিচু", "নারিকেল"], answer: "কাঁঠাল" },
+            { question: "আলোক তরঙ্গের গতি কত?", options: ["3 × 10⁸ m/s", "1.5 × 10⁸ m/s", "2 × 10⁸ m/s", "5 × 10⁸ m/s"], answer: "3 × 10⁸ m/s" },
+            { question: "বাংলাদেশের সংবিধান কবে কার্যকর হয়?", options: ["১৯৭১ সালের ১৬ ডিসেম্বর", "১৯৭২ সালের ১৬ ডিসেম্বর", "১৯৭৩ সালের ২৬ মার্চ", "১৯৭৫ সালের ৭ মার্চ"], answer: "১৯৭২ সালের ১৬ ডিসেম্বর" },
+            { question: "বিদ্যুতের এককের নাম কী?", options: ["জুল", "নিউটন", "কুলম্ব", "ভোল্ট"], answer: "ভোল্ট" },
+            { question: "পানিতে অরণ্য তৈরির জন্য কোন গাছ সবচেয়ে বেশি ব্যবহৃত হয়?", options: ["মেহগনি", "ম্যানগ্রোভ", "নারকেল", "কাঁঠাল"], answer: "ম্যানগ্রোভ" }
+        ];
+
+        function shuffle(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+
+        let shuffledQuestions = shuffle([...questions]);
+        let currentIndex = 0;
+        let score = 0;
+        let timeLeft = 300;
+
+        function startQuiz() {
+            document.getElementById("quiz").innerHTML = "";
+            if (currentIndex < shuffledQuestions.length) {
+                let q = shuffledQuestions[currentIndex];
+                let questionDiv = document.createElement("div");
+                questionDiv.classList.add("question");
+                questionDiv.textContent = q.question;
+                document.getElementById("quiz").appendChild(questionDiv);
+
+                q.options.forEach(option => {
+                    let optionBtn = document.createElement("button");
+                    optionBtn.classList.add("option");
+                    optionBtn.textContent = option;
+                    optionBtn.onclick = () => checkAnswer(option, q.answer);
+                    document.getElementById("quiz").appendChild(optionBtn);
+                });
+            } else {
+                document.getElementById("quiz").innerHTML = "";
+                document.getElementById("result").textContent = "আপনার স্কোর: " + score + " / " + questions.length;
+                document.getElementById("submit-score").style.display = "inline-block";
+            }
+        }
+
+        function checkAnswer(selected, correct) {
+            if (selected === correct) {
+                score++;
+            }
+            currentIndex++;
+            startQuiz();
+        }
+
+        function startTimer() {
+            let timerElement = document.getElementById("timer");
+            let timerInterval = setInterval(() => {
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById("quiz").innerHTML = "সময় শেষ! আপনার স্কোর: " + score + " / " + questions.length;
+                    document.getElementById("submit-score").style.display = "inline-block";
+                } else {
+                    let minutes = Math.floor(timeLeft / 60);
+                    let seconds = timeLeft % 60;
+                    timerElement.textContent = `সময়: ${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+                    timeLeft--;
+                }
+            }, 1000);
+        }
+
+        function saveScore(name, score) {
+            let scores = JSON.parse(localStorage.getItem("quizScores")) || [];
+            scores.push({ name: name, score: score });
+            localStorage.setItem("quizScores", JSON.stringify(scores));
+            showScores();
+        }
+
+        function showScores() {
+            let scores = JSON.parse(localStorage.getItem("quizScores")) || [];
+            let scoreBoard = "<h3>Quiz Leaderboard</h3><ul>";
+            scores.forEach(entry => {
+                scoreBoard += `<li>${entry.name}: ${entry.score} points</li>`;
+            });
+            scoreBoard += "</ul>";
+            document.getElementById("leaderboard").innerHTML = scoreBoard;
+        }
+
+        function submitScore() {
+            let userName = prompt("আপনার নাম লিখুন:");
+            if (userName) {
+                saveScore(userName, score);
+            }
+        }
+
+        startQuiz();
+        startTimer();
+        showScores();
+    </script>
+
+</body>
+</html>
