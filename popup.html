@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Floating Ad</title>
+    <style>
+        /* Popup container */
+        .ad-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            width: auto; /* ছবির সাথে এডজাস্ট হবে */
+            max-width: 90%; /* বড় স্ক্রিনেও সীমিত থাকবে */
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Close button */
+        .ad-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Animated image */
+        .animated-image {
+            width: 200px; /* ছবির আকার অনুযায়ী পরিবর্তন করুন */
+            height: auto;
+            margin: 10px auto;
+            animation: bounce 1.5s infinite;
+        }
+
+        /* CTA button */
+        .popup-btn {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .popup-btn:hover {
+            background: #0056b3;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Bounce animation for image */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="adPopup" class="ad-popup">
+        <span class="ad-close" onclick="closeAdPopup()">&times;</span>
+        <h3>ACS Future School এর ডিসকাউন্ট লিংক সমূহ!</h3>
+        <img src="https://your-image-url.com/image.png" alt="ACS Future School" class="animated-image">
+        <a href="courses.html">SEO Tools</a>
+    </div>
+
+    <script>
+        function showAdPopup() {
+            document.getElementById("adPopup").style.display = "block";
+        }
+
+        function closeAdPopup() {
+            document.getElementById("adPopup").style.display = "none";
+        }
+
+        // ৫ সেকেন্ড পর পপআপ দেখাবে
+        setTimeout(showAdPopup, 10000);
+    </script>
+
+</body>
+</html>
