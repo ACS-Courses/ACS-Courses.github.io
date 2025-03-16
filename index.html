@@ -706,6 +706,13 @@ s0.parentNode.insertBefore(s1,s0);
     window.location.href = "https://" + window.location.hostname + window.location.pathname + window.location.search;
   }
 </script>
-<script src="popup.html"></script>
+<div id="popupContainer"></div>
+<script>
+    fetch('popup.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('popupContainer').innerHTML = data;
+        });
+</script>
 </body>
 </html>
