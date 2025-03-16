@@ -712,7 +712,13 @@ s0.parentNode.insertBefore(s1,s0);
         .then(response => response.text())
         .then(data => {
             document.getElementById('popupContainer').innerHTML = data;
-        });
+            setTimeout(() => {
+                if (document.getElementById("adPopup")) {
+                    document.getElementById("adPopup").style.display = "block";
+                }
+            }, 5000);
+        })
+        .catch(error => console.error('Popup লোড করতে সমস্যা হয়েছে:', error));
 </script>
 </body>
 </html>
