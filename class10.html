@@ -251,6 +251,13 @@ setInterval(showNextFeature, 3000);
         <a href="https://wa.me/8801778682815" class="button whatsapp">What'sapp</a>
         <a href="#" class="button">বকেয়া পরিশোধ করুন</a>
     </div>
+<script>
+  fetch('menu.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+</script>
     
     <div class="footer">
         <img src="ACS_Future_School_Promo_Codes_Mobile (1).webp" alt="ACS Future School" width="150">
