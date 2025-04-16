@@ -255,12 +255,18 @@ setInterval(showNextFeature, 3000);
         <a href="#" class="button">বকেয়া পরিশোধ করুন</a>
     </div>
 <script>
-  fetch('menu.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('header').innerHTML = data;
-    });
-</script>
+        fetch("menu.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("logoSection").innerHTML = data;
+            
+            // স্ক্রিপ্ট রান করানোর জন্য
+            const scripts = document.getElementById("logoSection").getElementsByTagName("script");
+            for (let i = 0; i < scripts.length; i++) {
+                eval(scripts[i].innerText);
+            }
+        });
+    </script>
     
     <div class="footer">
         <img src="ACS_Future_School_Promo_Codes_Mobile (1).webp" alt="ACS Future School" width="150">
