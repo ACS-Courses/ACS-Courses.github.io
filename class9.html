@@ -193,7 +193,8 @@
       <option value="5">১০ম শ্রেণি</option>
     </select>
     <input type="text" id="numberInput" placeholder="ভর্তির নাম্বার লিখুন" style="width: 80%; padding: 10px; margin: 10px 0; border: 2px solid #4a148c; border-radius: 10px; font-size: 16px;">
-    <button onclick="generateCoupon()" style="background-color: #4a148c; color: white; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-size: 16px; margin-top: 10px;">কুপন জেনারেট করুন</button>
+    <button onclick="generateCoupon()" style="background-color: #4a148c; color: white; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-size: 16px; margin-top: 10px;">প্রোমো জেনারেট করুন</button>
+<button><a href="https://cutt.ly/BrwcRUu5" class="button">ভর্তি হও</a></button>
     <div id="couponResult" style="margin-top: 20px;"></div>
   </div>
 </section>
@@ -211,7 +212,7 @@
     const resultDiv = document.getElementById('couponResult');
     resultDiv.innerHTML = `
       <div style="margin-top: 20px; padding: 15px; background: #f3e5f5; border: 2px dashed #4a148c; border-radius: 15px; font-size: 18px; position: relative;">
-        ✅ আপনার কুপন কোড: <strong id="couponText">${couponCode}</strong>
+        ✅ আপনার প্রোমো কোড: <strong id="couponText">${couponCode}</strong>
         <button onclick="copyCoupon()" style="position: absolute; top: 10px; right: 10px; background: #4a148c; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">কপি করুন</button>
       </div>
     `;
