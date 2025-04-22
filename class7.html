@@ -17,6 +17,98 @@
 h1 {
   margin-top: 35px;
 }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            z-index: -1;
+        }
+        .section {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .section:nth-child(odd) {
+            background: #ffebcd;
+        }
+        .section:nth-child(even) {
+            background: #e6ffe6;
+        }
+        .subsection {
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            animation: slideIn 1s ease-in-out;
+        }
+        .subsection:nth-child(odd) {
+            background: #add8e6;
+        }
+        .subsection:nth-child(even) {
+            background: #f4c2c2;
+        }
+        .subsection img {
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+        }
+        .subsection a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #28a745;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button.whatsapp {
+            background-color: #25d366;
+        }
+        .footer {
+            background: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer a {
+            color: #f4f4f4;
+            text-decoration: none;
+            margin: 0 10px;
+        }
 /* Navbar */
         .navbar {
             background-color: #333;
@@ -119,97 +211,6 @@ h1 {
             }
         }    
         </style>
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0);
-            z-index: -1;
-        }
-        .section {
-            padding: 20px;
-            margin: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            position: relative;
-            animation: fadeInUp 1s ease-in-out;
-        }
-        .section:nth-child(odd) {
-            background: #ffebcd;
-        }
-        .section:nth-child(even) {
-            background: #e6ffe6;
-        }
-        .subsection {
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 8px;
-            text-align: left;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            animation: slideIn 1s ease-in-out;
-        }
-        .subsection:nth-child(odd) {
-            background: #add8e6;
-        }
-        .subsection:nth-child(even) {
-            background: #f4c2c2;
-        }
-        .subsection img {
-            width: 100px;
-            height: 100px;
-            border-radius: 5px;
-        }
-        .subsection a {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 5px 10px;
-            background: #28a745;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateX(-20px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        .button-container {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: white;
-            background-color: #28a745;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .button.whatsapp {
-            background-color: #25d366;
-        }
-        .footer {
-            background: black;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .footer a {
-            color: #f4f4f4;
-            text-decoration: none;
-            margin: 0 10px;
-        }
     </style>
     <style>
 .feature-slider {
