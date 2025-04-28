@@ -1,0 +1,39 @@
+backend:
+  name: github
+  repo: ACS-Courses.github.io/acs-courses.github.io
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "index.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Page Content", name: "body", widget: "markdown" }
+
+      - label: "Courses Page"
+        name: "courses"
+        file: "courses.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Page Content", name: "body", widget: "markdown" }
+
+      - label: "Future School Page"
+        name: "future-school"
+        file: "future-school.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Page Content", name: "body", widget: "markdown" }
+
+      - label: "Contact Page"
+        name: "contact"
+        file: "contact.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Page Content", name: "body", widget: "markdown" }
