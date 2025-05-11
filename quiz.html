@@ -1,134 +1,302 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>৯-১০ম শ্রেণির কুইজ - পরীক্ষা দিন</title>
-    <meta name="description" content="৯-১০ম শ্রেণির শিক্ষার্থীদের জন্য বিশেষ কুইজ। ১০টি প্রশ্নের উত্তর দিন এবং আপনার স্কোর দেখুন!">
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; background: #f4f4f4; padding: 20px; }
-        #quiz-container { background: #fff; padding: 20px; max-width: 600px; margin: auto; border-radius: 8px; box-shadow: 0px 0px 10px #ccc; }
-        .question { font-size: 18px; margin-bottom: 10px; }
-        .option { display: block; background: #ddd; padding: 10px; margin: 5px; cursor: pointer; border-radius: 5px; }
-        .option:hover { background: #bbb; }
-        #timer { font-size: 20px; color: red; margin-bottom: 20px; }
-        #result { font-size: 22px; font-weight: bold; margin-top: 20px; }
-        #start-again, #submit-score { margin-top: 10px; padding: 10px; background: #007BFF; color: white; border: none; cursor: pointer; border-radius: 5px; }
-        #start-again:hover, #submit-score:hover { background: #0056b3; }
-        #leaderboard { margin-top: 20px; text-align: left; background: #fff; padding: 10px; border-radius: 8px; max-width: 400px; margin: auto; box-shadow: 0px 0px 5px #ccc; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>কিস্তিতে ভর্তি | ACS Future School</title>
+  <meta name="description" content="ACS Future School-এ নিজে নিজেই কিস্তিতে ভর্তি হতে এখনই প্রোমো কোড জেনারেট করুন। সহজে ভর্তি, সহজ পেমেন্ট।">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Hind Siliguri', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #e0f7fa, #e1bee7);
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+    h2 {
+      color: #4a148c;
+      margin-bottom: 15px;
+    }
+    ul {
+      text-align: left;
+      padding-left: 20px;
+    }
+    select, input, button {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 2px solid #4a148c;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #4a148c;
+      color: white;
+      cursor: pointer;
+    }
+    .coupon-box {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f3e5f5;
+      border: 2px dashed #4a148c;
+      border-radius: 15px;
+      font-size: 18px;
+      position: relative;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #4a148c;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    a.enroll-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #00796b;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+    /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+/* Navbar */
+        .navbar {
+            background-color: #333;
+            padding: 0px 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar h2 {
+            color: white;
+            margin: 0;
+        }
+
+        /* Desktop Menu */
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-size: 18px;
+        }
+
+        .nav-links a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        /* Hamburger Icon (Shifted to the Left) */
+        .menu-icon {
+            display: none;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            cursor: pointer;
+        }
+
+        .menu-icon div {
+            width: 30px;
+            height: 4px;
+            background-color: black;
+            margin: 5px 0;
+        }
+
+        /* Sidebar Menu (Mobile) */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Hidden by default */
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            padding-top: 60px;
+            transition: left 0.4s;
+            z-index: 999;
+        }
+
+        .side-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-size: 18px;
+        }
+
+        .side-menu a:hover {
+            background-color: #575757;
+        }
+
+        /* Close Button */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Show Menu */
+        .side-menu.active {
+            left: 0;
+        }
+
+        /* Responsive for Mobile */
+        @media (max-width: 767px) {
+            .nav-links {
+                display: none;
+            }
+            .menu-icon {
+                display: block;
+            }
+        }    
+        </style>
+  </style>
 </head>
 <body>
-
-    <div id="quiz-container">
-        <h2>৯-১০ম শ্রেণির কুইজ</h2>
-        <div id="timer">সময়: 10:00</div>
-        <div id="quiz"></div>
-        <div id="result"></div>
-        <button id="submit-score" style="display: none;" onclick="submitScore()">স্কোর জমা দিন</button>
-        <button id="start-again" onclick="location.reload()">পুনরায় শুরু করুন</button>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="nav-links">
+<a href="index.html">Home</a>
+            <a href="courses.html">Academic Program 2025</a>
+<a href="Panel.html">Teacher Panel</a>
+            <a href="about.html">About</a>
+            <a href="Contact.html">Contact</a>
+<a href="Policy.html">Privacy policy</a>
+<a href="quiz.html">Quiz</a>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
 
-    <div id="leaderboard"></div>
+    <!-- Sidebar Menu (Mobile) -->
+    <div class="side-menu" id="sideMenu">
+        <span class="close-btn" onclick="toggleMenu()">✖</span>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Academic Program 2025</a>
+<a href="Panel.html">Teacher Panel</a>
+<a href="class6.html">AFS Class 6</a>
+<a href="class7.html">AFS Class 7</a>
+<a href="class8.html">AFS Class 8</a>
+<a href="class9.html">AFS Class 9</a>
+<a href="class10.html">AFS Class 10</a>
+        <a href="Contact.html">Contact</a>
+<a href="Policy.html">Privacy policy</a>
+<a href="quiz.html">কিস্তিতে ভর্তি হও</a>
+    </div>
 
     <script>
-        const questions = [
-            { question: "মুক্তিযুদ্ধ শুরু হয় কোন সালে?", options: ["১৯৬৫", "১৯৭১", "১৯৫২", "১৯৮৮"], answer: "১৯৭১" },
-            { question: "বাংলাদেশের প্রথম রাজধানী কোনটি ছিল?", options: ["ঢাকা", "চট্টগ্রাম", "মুজিবনগর", "রাজশাহী"], answer: "মুজিবনগর" },
-            { question: "জ্যামিতিতে পাই (π) এর মান কত?", options: ["৩.১৪", "২.৭১", "১.৬১৮", "১.৪১৪"], answer: "৩.১৪" },
-            { question: "'কপালকুণ্ডলা' উপন্যাসের লেখক কে?", options: ["বঙ্কিমচন্দ্র চট্টোপাধ্যায়", "রবীন্দ্রনাথ ঠাকুর", "মাইকেল মধুসূদন দত্ত", "শরৎচন্দ্র চট্টোপাধ্যায়"], answer: "বঙ্কিমচন্দ্র চট্টোপাধ্যায়" },
-            { question: "নিউটনের গতিসূত্র কয়টি?", options: ["১টি", "২টি", "৩টি", "৪টি"], answer: "৩টি" },
-            { question: "বাংলাদেশের জাতীয় ফল কোনটি?", options: ["কাঁঠাল", "আম", "লিচু", "নারিকেল"], answer: "কাঁঠাল" },
-            { question: "আলোক তরঙ্গের গতি কত?", options: ["3 × 10⁸ m/s", "1.5 × 10⁸ m/s", "2 × 10⁸ m/s", "5 × 10⁸ m/s"], answer: "3 × 10⁸ m/s" },
-            { question: "বাংলাদেশের সংবিধান কবে কার্যকর হয়?", options: ["১৯৭১ সালের ১৬ ডিসেম্বর", "১৯৭২ সালের ১৬ ডিসেম্বর", "১৯৭৩ সালের ২৬ মার্চ", "১৯৭৫ সালের ৭ মার্চ"], answer: "১৯৭২ সালের ১৬ ডিসেম্বর" },
-            { question: "বিদ্যুতের এককের নাম কী?", options: ["জুল", "নিউটন", "কুলম্ব", "ভোল্ট"], answer: "ভোল্ট" },
-            { question: "পানিতে অরণ্য তৈরির জন্য কোন গাছ সবচেয়ে বেশি ব্যবহৃত হয়?", options: ["মেহগনি", "ম্যানগ্রোভ", "নারকেল", "কাঁঠাল"], answer: "ম্যানগ্রোভ" }
-        ];
-
-        function shuffle(array) {
-            return array.sort(() => Math.random() - 0.5);
+        function toggleMenu() {
+            var menu = document.getElementById("sideMenu");
+            menu.classList.toggle("active");
         }
-
-        let shuffledQuestions = shuffle([...questions]);
-        let currentIndex = 0;
-        let score = 0;
-        let timeLeft = 300;
-
-        function startQuiz() {
-            document.getElementById("quiz").innerHTML = "";
-            if (currentIndex < shuffledQuestions.length) {
-                let q = shuffledQuestions[currentIndex];
-                let questionDiv = document.createElement("div");
-                questionDiv.classList.add("question");
-                questionDiv.textContent = q.question;
-                document.getElementById("quiz").appendChild(questionDiv);
-
-                q.options.forEach(option => {
-                    let optionBtn = document.createElement("button");
-                    optionBtn.classList.add("option");
-                    optionBtn.textContent = option;
-                    optionBtn.onclick = () => checkAnswer(option, q.answer);
-                    document.getElementById("quiz").appendChild(optionBtn);
-                });
-            } else {
-                document.getElementById("quiz").innerHTML = "";
-                document.getElementById("result").textContent = "আপনার স্কোর: " + score + " / " + questions.length;
-                document.getElementById("submit-score").style.display = "inline-block";
-            }
-        }
-
-        function checkAnswer(selected, correct) {
-            if (selected === correct) {
-                score++;
-            }
-            currentIndex++;
-            startQuiz();
-        }
-
-        function startTimer() {
-            let timerElement = document.getElementById("timer");
-            let timerInterval = setInterval(() => {
-                if (timeLeft <= 0) {
-                    clearInterval(timerInterval);
-                    document.getElementById("quiz").innerHTML = "সময় শেষ! আপনার স্কোর: " + score + " / " + questions.length;
-                    document.getElementById("submit-score").style.display = "inline-block";
-                } else {
-                    let minutes = Math.floor(timeLeft / 60);
-                    let seconds = timeLeft % 60;
-                    timerElement.textContent = `সময়: ${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
-                    timeLeft--;
-                }
-            }, 1000);
-        }
-
-        function saveScore(name, score) {
-            let scores = JSON.parse(localStorage.getItem("quizScores")) || [];
-            scores.push({ name: name, score: score });
-            localStorage.setItem("quizScores", JSON.stringify(scores));
-            showScores();
-        }
-
-        function showScores() {
-            let scores = JSON.parse(localStorage.getItem("quizScores")) || [];
-            let scoreBoard = "<h3>Quiz Leaderboard</h3><ul>";
-            scores.forEach(entry => {
-                scoreBoard += `<li>${entry.name}: ${entry.score} points</li>`;
-            });
-            scoreBoard += "</ul>";
-            document.getElementById("leaderboard").innerHTML = scoreBoard;
-        }
-
-        function submitScore() {
-            let userName = prompt("আপনার নাম লিখুন:");
-            if (userName) {
-                saveScore(userName, score);
-            }
-        }
-
-        startQuiz();
-        startTimer();
-        showScores();
     </script>
+  <div class="container">
+    <h2>📘 কিস্তিতে ভর্তি প্রোমো জেনারেটর</h2>
+    <p><b>ACS Future School এ যেভাবে নিজে নিজে কিস্তিতে ভর্তি হবেন:</b></p>
+    <ul>
+      <li>নিচে আপনার শ্রেণি সিলেক্ট করুন এবং আপনার ভর্তির নাম্বার দিন</li>
+      <li>প্রোমো কোড জেনারেট করে কপি করুন</li>
+      <li>"ভর্তি হও" লিংকে গিয়ে প্রোমো কোড বসিয়ে এপ্লাই করুন</li>
+      <li>পেমেন্ট করলেই ভর্তি সম্পন্ন হয়ে যাবে</li>
+    </ul>
+    <p>🚫 <b>বি.দ্র:</b> বকেয়া ১ মাসের মধ্যে পরিশোধ করতে হবে</p>
 
+    <select id="classSelect">
+      <option value="1">৬ষ্ঠ শ্রেণি</option>
+      <option value="2">৭ম শ্রেণি</option>
+      <option value="3">৮ম শ্রেণি</option>
+      <option value="4">৯ম শ্রেণি</option>
+      <option value="5">১০ম শ্রেণি</option>
+    </select>
+    <input type="text" id="numberInput" placeholder="ভর্তির নাম্বার লিখুন">
+    <button onclick="generateCoupon()">প্রোমো জেনারেট করুন</button>
+
+    <div id="couponResult"></div>
+
+    <a id="enrollLink" href="https://cutt.ly/BrwcRUu5" class="enroll-link">ভর্তি হও</a>
+  </div> 
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://cutt.ly/QrqXncCi" 
+     style="display: inline-block; padding: 12px 30px; background-color: #e53935; color: white; text-decoration: none; border-radius: 30px; font-size: 18px; font-weight: bold; transition: background 0.3s;">
+    বকেয়া পরিশোধ করুন
+  </a>
+</div>
+
+  <script>
+    // শ্রেণিভিত্তিক ভর্তি লিংক
+    const classLinks = {
+      "1": "https://cutt.ly/irwcPGej",
+      "2": "https://cutt.ly/arwcOWQs",
+      "3": "https://cutt.ly/ErwcI2Wk",
+      "4": "https://cutt.ly/krwcIsyb",
+      "5": "https://cutt.ly/BrwcRUu5"
+    };
+
+    // শ্রেণি পরিবর্তন হলে লিংক আপডেট
+    document.getElementById('classSelect').addEventListener('change', function () {
+      const selectedValue = this.value;
+      const updatedLink = classLinks[selectedValue] || "https://cutt.ly/BrwcRUu5";
+      document.getElementById('enrollLink').href = updatedLink;
+    });
+
+    function generateCoupon() {
+      const classValue = document.getElementById('classSelect').value;
+      const number = document.getElementById('numberInput').value.trim();
+
+      if (number === "") {
+        alert("অনুগ্রহ করে ভর্তির নাম্বার লিখুন।");
+        return;
+      }
+
+      const couponCode = `TELE${classValue}-${number}`;
+      const resultDiv = document.getElementById('couponResult');
+      resultDiv.innerHTML = `
+        <div class="coupon-box">
+         প্রোমো কোড: <strong id="couponText">${couponCode}</strong>
+          <button class="copy-btn" onclick="copyCoupon()">কপি করুন</button>
+        </div>
+      `;
+    }
+
+    function copyCoupon() {
+      const couponText = document.getElementById('couponText').innerText;
+      navigator.clipboard.writeText(couponText).then(() => {
+        alert("প্রোমো কোড কপি হয়েছে!");
+      });
+    }
+  </script>
 </body>
 </html>
