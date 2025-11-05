@@ -4,8 +4,15 @@ on:
   push:
     branches:
       - main
+    paths:
+      - '**/*.html'
+      - '**/*.png'
+      - '**/*.jpg'
+      - '**/*.jpeg'
+      - '**/*.webp'
+      - '**/*.gif'
   schedule:
-    - cron: '0 0 * * 0' # প্রতি রবিবার Broken Link Checker চলবে
+    - cron: '0 0 * * 0' # প্রতি রবিবার Broken Link Check
   workflow_dispatch:
 
 jobs:
@@ -17,33 +24,36 @@ jobs:
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_branch: gh-pages   # GitHub Pages branch
+          publish_dir: ./           # যদি সব ফাইল root এ থাকে
+          # যদি docs/ ফোল্ডারে থাকে, তাহলে: publish_dir: ./docs
 
-  ping:
-    name: Notify Search Engines
-    runs-on: ubuntu-latest
-    steps:
-      - name: Notify Google
-        run: |
-          echo "Notifying Google..."
-          curl -X POST "https://www.google.com/ping?sitemap=https://acspromocodes.com/sitemap.xml"
-      - name: Notify Bing
-        run: |
-          echo "Notifying Bing..."
-          curl -X GET "https://www.bing.com/ping?sitemap=https://acspromocodes.com/sitemap.xml"
-
-  optimize:
+  optimize_images:
     name: Optimize Images
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: calibreapp/image-actions@main
+      - name: Optimize all images
+        uses: calibreapp/image-actions@main
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
+          # সব ধরনের ইমেজ optimize হবে
+          paths: '**/*.{png,jpg,jpeg,webp,gif}'
+
+  ping:
+    name: Notify Search Engines
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - name: Notify Google
+        run: curl -X POST "https://www.google.com/ping?sitemap=https://acspromocodes.com/sitemap.xml"
+      - name: Notify Bing
+        run: curl -X GET "https://www.bing.com/ping?sitemap=https://acspromocodes.com/sitemap.xml"
 
   linkcheck:
     name: Broken Link Check
     runs-on: ubuntu-latest
+    needs: deploy
     steps:
       - uses: actions/checkout@v4
       - name: Run Link Checker
@@ -54,7 +64,7 @@ jobs:
   notify:
     name: Email Notification
     runs-on: ubuntu-latest
-    needs: [ping, optimize, linkcheck]
+    needs: [ping, optimize_images, linkcheck]
     steps:
       - name: Send Email on Update
         uses: dawidd6/action-send-mail@v3
@@ -63,7 +73,7 @@ jobs:
           server_port: 587
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          subject: "ACS PromoCodes site updated!"
+          subject: "ACS Courses site updated!"
           to: abujeshan1139181@gmail.com
           from: "ACS Automation <${{ secrets.MAIL_USERNAME }}>"
           body: |
