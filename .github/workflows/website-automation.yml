@@ -1,4 +1,4 @@
-name: ACS PromoCodes Automation Pack
+name: ACS Courses Automation Pack
 
 on:
   push:
@@ -67,6 +67,6 @@ jobs:
           to: abujeshan1139181@gmail.com
           from: "ACS Automation <${{ secrets.MAIL_USERNAME }}>"
           body: |
-            ✅ Your website (acspromocodes.com) has been updated and search engines have been notified.
+            ✅ Your website (acs-courses.github.io) has been updated and search engines have been notified.
             🕓 Time: ${{ github.event.head_commit.timestamp }}
             🚀 Keep growing!
