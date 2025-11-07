@@ -1,4 +1,4 @@
-name: Auto Deploy + Image Optimize + Email Notify
+name: Full Auto Optimize + Deploy + Notify
 
 on:
   push:
@@ -6,36 +6,52 @@ on:
       - main
 
 jobs:
-  build-deploy:
+  website_automation:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
+      # 🖼️ Optimize all images
       - name: Optimize images
         uses: calibreapp/image-actions@main
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           compressOnly: true
 
+      # 🔗 Check for broken links in HTML files
+      - name: Check broken links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --verbose ./  # checks all files in repo
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 🚀 Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # root directory
+          publish_dir: ./
 
-      - name: Send email notification
+      # 📧 Send Gmail notification
+      - name: Send Email Notification
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
           server_port: 587
           username: ${{ secrets.EMAIL_USER }}
           password: ${{ secrets.EMAIL_PASS }}
-          subject: "✅ Site Updated on GitHub Pages"
+          subject: "✅ Site Auto-Updated: Images Optimized + Links Checked"
           to: ${{ secrets.EMAIL_USER }}
           from: "GitHub Automation <${{ secrets.EMAIL_USER }}>"
           body: |
             Hey Jeshan 👋  
-            তোমার সাইট acs-courses.github.io সফলভাবে আপডেট হয়েছে!  
-            নতুন চেঞ্জ এখন লাইভ 😄
+            তোমার সাইট সফলভাবে আপডেট হয়েছে!
+
+            ✅ ইমেজগুলো অপটিমাইজ হয়েছে  
+            ✅ ব্রোকেন লিংক চেক সম্পন্ন  
+            ✅ GitHub Pages এ নতুন ভার্সন লাইভ  
+
+            চেক করতে পারো এখান থেকে 👉 https://acs-courses.github.io/
