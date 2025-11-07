@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="এসসি এস ফিউচার স্কুলের যোগাযোগের পেইজ। আমাদের ফোন নম্বর, ইমেইল এবং হুয়াট্সঅ্যাপের মাধ্যমে সহজে যোগাযোগ করুন।">
+    <meta name="keywords" content="এসিএস ফিউচার স্কুল, একাডেমিক প্রোগ্রাম, ৬ষ্ঠ শ্রেণি, ১০ম শ্রেণি, অনলাইন কোর্স, এসইও">
+    <title>যোগাযোগ করুন | এসিএস ফিউচার স্কুল</title>
+<style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #333;
+            padding: 0px 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar h2 {
+            color: white;
+            margin: 0;
+        }
+
+        /* Desktop Menu */
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-size: 18px;
+        }
+
+        .nav-links a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        /* Hamburger Icon (Shifted to the Left) */
+        .menu-icon {
+            display: none;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            cursor: pointer;
+        }
+
+        .menu-icon div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            margin: 5px 0;
+        }
+
+        /* Sidebar Menu (Mobile) */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Hidden by default */
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            padding-top: 60px;
+            transition: left 0.4s;
+            z-index: 999;
+        }
+
+        .side-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-size: 18px;
+        }
+
+        .side-menu a:hover {
+            background-color: #575757;
+        }
+
+        /* Close Button */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Show Menu */
+        .side-menu.active {
+            left: 0;
+        }
+
+        /* Responsive for Mobile */
+        @media (max-width: 767px) {
+            .nav-links {
+                display: none;
+            }
+            .menu-icon {
+                display: block;
+            }
+        }
+    </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .contact-container {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info h2 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            margin: 15px 0;
+        }
+
+        .contact-info a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        footer ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="courses.html">Academic Program 2025</a>
+<a href="Panel.html">Teacher Panel</a>
+            <a href="about.html">About</a>
+            <a href="Contact.html">Contact</a>
+<a href="Policy.html">Privacy policy</a>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- Sidebar Menu (Mobile) -->
+    <div class="side-menu" id="sideMenu">
+        <span class="close-btn" onclick="toggleMenu()">✖</span>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Academic Program 2025</a>
+<a href="Panel.html">Teacher Panel</a>
+<a href="about.html">About</a>
+            <a
+        <a href="Contact.html">Contact</a>
+<a href="Policy.html">Privacy policy</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("sideMenu");
+            menu.classList.toggle("active");
+        }
+    </script>
+    <header>
+        <h1>Contact us <img src="Picsart_24-12-27_21-24-11-024.webp" Width="60" height="auto" alt="ACS Future School"></h1>
+    </header>
+
+    <div class="contact-container">
+        <section class="contact-info">
+            <h2>Contact us</h2>
+<ul style="Square">
+           <li> <p><strong>Number:</strong> <a href="tel:+8801778682815">+88 01778682815</a></p>
+           <li> <p><strong>Email:</strong> <a href="mailto:info@acsfutureschool.com">info@acsfutureschool.com</a></p>
+           <li> <p><strong>What'sapp:</strong> <a href="https://wa.me/8801778682815">Chat with us</a></p>
+</ul>
+        </section>
+
+        <footer>
+            <ul>
+                <li><a href="Policy.html">Privacy Policy</a></li>
+                <li><a href="/about-us">About us</a></li>
+            </ul>
+        </footer>
+    </div>
+
+</body>
+</html>

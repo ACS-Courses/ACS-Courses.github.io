@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACS Future School|SSC 26 FRB in discount</title>
+    <meta name="description" content="ACS Future school এর SSC 26 FRB এ ভর্তি হও সর্বোচ্চ ডিসকাউন্টে। ACS Future School এখন আপনার শেষ ভরসা "/>
+    <meta name="keywords" content="ACS Future School, ACS Class 10,ACS SSC 26 FRB,ACS Future School final revision batch, ACS class 10 FRB, Science, Commerce, Arts">
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+        }
+        .navbar {
+            background-color: #000;
+            padding: 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .nav-links {
+            display: flex;
+            padding-right: 20px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-size: 16px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .nav-links a:hover {
+            background-color: #575757;
+            color: #fff;
+        }
+        .menu-icon {
+            display: none;
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            cursor: pointer;
+        }
+        .menu-icon div {
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #222;
+            padding-top: 60px;
+            transition: left 0.4s;
+            z-index: 999;
+            box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+        }
+        .side-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-size: 16px;
+            border-bottom: 1px solid #444;
+        }
+        .side-menu a:hover {
+            background-color: #575757;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+        .side-menu.active {
+            left: 0;
+        }
+        @media (max-width: 767px) {
+            .nav-links {
+                display: none;
+            }
+            .menu-icon {
+                display: block;
+            }
+        }
+        h1 {
+            padding-top: 80px;
+            font-size: 2.5rem;
+            color: #004d40;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .course-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            padding: 50px 20px;
+        }
+        .course-card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            width: 350px;
+            text-align: left;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            animation: cardFadeIn 1s ease-in-out;
+            border: 2px solid #e0f2f1;
+        }
+        .course-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        .course-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 2px solid #e0f2f1;
+            transition: transform 0.5s ease;
+        }
+        .course-card:hover img {
+            transform: scale(1.1);
+        }
+        .course-content {
+            padding: 25px;
+        }
+        .course-content h3 {
+            font-size: 2rem;
+            color: #00796b;
+            margin-top: 0;
+        }
+        .price-details {
+            margin: 20px 0;
+        }
+        .original-price {
+            font-size: 1.2rem;
+            color: #999;
+            text-decoration: line-through;
+            margin-right: 10px;
+        }
+        .discounted-price {
+            font-size: 1.8rem;
+            color: #d32f2f;
+            font-weight: bold;
+        }
+        .course-details {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .course-details li {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #555;
+            position: relative;
+            padding-left: 25px;
+        }
+        .course-details li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+        }
+        .enroll-button {
+            display: inline-block;
+            width: 100%;
+            padding: 15px 0;
+            background: linear-gradient(45deg, #004d40, #009688);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .enroll-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 150, 136, 0.4);
+        }
+        @keyframes cardFadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .important-links {
+            background-color: #e0f7fa;
+            padding: 50px 20px;
+            margin-top: 50px;
+        }
+        .important-links h2 {
+            color: #00796b;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .links-grid a {
+            display: block;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #00796b;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .links-grid a:hover {
+            transform: translateY(-5px);
+            background-color: #b2dfdb;
+        }
+        .footer {
+            background-color: #000;
+            color: #aaa;
+            padding: 30px;
+            text-align: center;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .footer a:hover {
+            color: #009688;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="courses.html">Academic Program 2025</a>
+            <a href="Panel.html">Teacher Panel</a>
+            <a href="about.html">About</a>
+            <a href="Contact.html">Contact</a>
+            <a href="Policy.html">Privacy Policy</a>
+            <a href="quiz.html">Admit in Installments</a>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div class="side-menu" id="sideMenu">
+        <span class="close-btn" onclick="toggleMenu()">✖</span>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Academic Program 2025</a>
+        <a href="Panel.html">Teacher Panel</a>
+        <a href="class6.html">AFS Class 6</a>
+        <a href="class7.html">AFS Class 7</a>
+        <a href="class8.html">AFS Class 8</a>
+        <a href="class9.html">AFS Class 9</a>
+        <a href="class10.html">AFS Class 10</a>
+        <a href="Contact.html">Contact</a>
+        <a href="Policy.html">Privacy Policy</a>
+        <a href="quiz.html">SSC 26 FRB</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("sideMenu");
+            menu.classList.toggle("active");
+        }
+    </script>
+
+    <h1>SSC 26 FRB</h1>
+    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/ACS_Future_School_logo_photo.webp" alt="ACS Future School" width="90" height="100">
+
+    <div class="course-container">
+        <div class="course-card">
+            <img src="frb-banner.png" alt="FRB (Science) ">
+            <div class="course-content">
+                <h3>FRB (Science) </h3>
+                <p class="price-details600</span>
+                </p>
+                <ul class="course-details">
+                    <li>SSC 26 সম্েবাসের কোর্স প্ল্যান</li>
+                    <li>লাইভ ও রেকর্ডেড ক্লাস</li>
+                    <li>প্রতি ক্লাসের পর কুইজ</li>
+                    <li>এক্সপার্ট টিচার দ্বারা ক্লাস</li>
+                    <li>অনলাইন মডেল টেস্ট </li>
+                    <li>বেসিক থেকে পাঠদান</li>
+                </ul>
+                <a href="https://acsfs.com/0nXT4" class="enroll-button">ভর্তি হও</a>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <img src="frb-banner.png" alt="FRB (Commerce)">
+            <div class="course-content">
+                <h3>FRB (Commerce)</h3>
+                <p class="price-details">
+                    <span class="original-price">৳2,000</span>
+                    <span class="discounted-price">৳1550</span>
+                </p>
+                <ul class="course-details">
+                    <li>জেনারেল সাবজেক্ট এর কোর্স প্ল্যান</li>
+                    <li>সকল লাইভ ক্লাস ও রেকর্ডেড ক্লাসের এক্সেস</li>
+                    <li>অনলাইন মডেল টেস্ট </li>
+                    <li>বেসিক থেকে পড়ানো হবে</li>
+                </ul>
+                <a href="https://acsfs.com/rnXYl" class="enroll-button">ভর্তি হও</a>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <img src="frb-banner.png" alt="FRB (Arts)">
+            <div class="course-content">
+                <h3>FRB (Arts)</h3>
+                <p class="price-details">
+                    <span class="original-price">৳2,000</span>
+                    <span class="discounted-price">৳1550</span>
+                </p>
+                <ul class="course-details">
+                    <li>জেনারেল সাবজেক্ট এর কোর্স প্ল্যান</li>
+                    <li>বেসিক থেকে এডভান্সড প্রস্তুতি</li>
+                    <li>সাপোর্ট টিম দ্বারা সহায়তা</li>
+                    <li>অনলাইন মডেল টেস্ট</li>
+                </ul>
+                <a href="https://acsfs.com/rnXYl" class="enroll-button">ভর্তি হও</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="important-links">
+        <h2>গুরুত্বপূর্ণ লিংকসমূহ</h2>
+        <div class="links-grid">
+            <a href="https://wa.me/8801778682815">WhatsApp Support</a>
+            <a href="https://cutt.ly/QrqXncCi">বকেয়া পরিশোধ করুন</a>
+            <a href="https://wa.me/8801778682815?text=FRB%20সম্পর্কে%20জানতে%20চাই">Helpline</a>
+            <a href="courses.html">আমাদের একাডেমিক প্রোগ্রাম (6-10)</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>📧 E-mail: afsaffiliate@gmail.com</p>
+        <p>
+            <a href="Contact.html">Contact</a> |
+            <a href="about.html">About</a> |
+            <a href="Policy.html">Privacy Policy</a>
+        </p>
+    </div>
+
+</body>
+</html>
