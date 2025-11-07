@@ -1,99 +1,41 @@
-name: ACS Courses Automation Pack
-permissions:
-  contents: write
+name: Auto Deploy + Image Optimize + Email Notify
 
 on:
   push:
     branches:
       - main
-    paths:
-      - '**/*.html'
-      - '**/*.png'
-      - '**/*.jpg'
-      - '**/*.jpeg'
-      - '**/*.webp'
-      - '**/*.gif'
-  schedule:
-    - cron: '0 0 * * 0' # প্রতি রবিবার Broken Link Check
-  workflow_dispatch:
 
 jobs:
-  deploy:
-    name: Auto Deploy to GitHub Pages
+  build-deploy:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./  # যদি ফাইলগুলো root এ থাকে, না থাকলে ./docs করে দিও
 
-  optimize_images:
-    name: Optimize Images (Direct Push)
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Install image optimization tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y optipng jpegoptim webp
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
       - name: Optimize images
-        run: |
-          find . -type f -iname "*.png" -exec optipng -o7 {} \;
-          find . -type f -iname "*.jpg" -exec jpegoptim --strip-all {} \;
-          find . -type f -iname "*.jpeg" -exec jpegoptim --strip-all {} \;
-          find . -type f -iname "*.webp" -exec cwebp -q 90 {} -o {} \; || true
-
-      - name: Commit optimized images
-        run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git add .
-          git commit -m "Optimized images" || echo "No image changes"
-          git push
-
-  ping:
-    name: Notify Search Engines
-    runs-on: ubuntu-latest
-    needs: deploy
-    steps:
-      - name: Notify Google
-        run: curl -X POST "https://www.google.com/ping?sitemap=https://acspromocodes.com/sitemap.xml"
-      - name: Notify Bing
-        run: curl -X GET "https://www.bing.com/ping?sitemap=https://acspromocodes.com/sitemap.xml"
-
-  linkcheck:
-    name: Broken Link Check
-    runs-on: ubuntu-latest
-    needs: deploy
-    steps:
-      - uses: actions/checkout@v4
-      - name: Run Link Checker
-        uses: lycheeverse/lychee-action@v1.8.0
+        uses: calibreapp/image-actions@main
         with:
-          args: --verbose --no-progress .
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          compressOnly: true
 
-  notify:
-    name: Email Notification
-    runs-on: ubuntu-latest
-    needs: [ping, optimize_images, linkcheck]
-    steps:
-      - name: Send Email on Update
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./  # root directory
+
+      - name: Send email notification
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
           server_port: 587
-          username: ${{ secrets.MAIL_USERNAME }}
-          password: ${{ secrets.MAIL_PASSWORD }}
-          subject: "ACS Courses site updated!"
-          to: abujeshan1139181@gmail.com
-          from: "ACS Automation <${{ secrets.MAIL_USERNAME }}>"
+          username: ${{ secrets.EMAIL_USER }}
+          password: ${{ secrets.EMAIL_PASS }}
+          subject: "✅ Site Updated on GitHub Pages"
+          to: ${{ secrets.EMAIL_USER }}
+          from: "GitHub Automation <${{ secrets.EMAIL_USER }}>"
           body: |
-            ✅ Your website (acs-courses.github.io) has been updated and search engines have been notified.
-            🕓 Time: ${{ github.event.head_commit.timestamp }}
-            🚀 Keep growing!
+            Hey Jeshan 👋  
+            তোমার সাইট acs-courses.github.io সফলভাবে আপডেট হয়েছে!  
+            নতুন চেঞ্জ এখন লাইভ 😄
