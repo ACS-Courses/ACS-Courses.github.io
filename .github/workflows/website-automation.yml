@@ -1,4 +1,6 @@
 name: ACS Courses Automation Pack
+permissions:
+  contents: write
 
 on:
   push:
@@ -24,20 +26,20 @@ jobs:
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages   # GitHub Pages branch
-          publish_dir: ./           # যদি সব ফাইল root এ থাকে
-          # যদি docs/ ফোল্ডারে থাকে, তাহলে: publish_dir: ./docs
+          publish_branch: gh-pages
+          publish_dir: ./
 
   optimize_images:
     name: Optimize Images
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - name: Optimize all images
         uses: calibreapp/image-actions@main
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-          # সব ধরনের ইমেজ optimize হবে
           paths: '**/*.{png,jpg,jpeg,webp,gif}'
 
   ping:
