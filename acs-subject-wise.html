@@ -27,7 +27,7 @@
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* --- Navbar (Consistent with Header) --- */
+        /* --- Navbar --- */
         .navbar { background: rgba(255, 255, 255, 0.95); padding: 10px 0; position: sticky; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         .navbar-container { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         .nav-logo img { width: 50px; }
@@ -49,7 +49,7 @@
         .course-card {
             background: var(--white);
             border-radius: 15px;
-            overflow: hidden; /* Banner rounded corners */
+            overflow: hidden; 
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             transition: 0.3s ease;
             display: flex;
@@ -58,12 +58,12 @@
         }
         .course-card:hover { transform: translateY(-8px); }
 
-        /* Card Banner Image */
+        /* --- Card Banner Image (FIXED) --- */
         .card-banner {
             width: 100%;
-            height: 180px;
-            background: #eee;
-            object-fit: cover;
+            height: auto; /* ফিক্সড হাইট সরিয়ে অটো করে দেওয়া হয়েছে */
+            display: block;
+            background: #f0f0f0;
         }
 
         .card-content {
@@ -75,7 +75,7 @@
             background: #ffeb3b;
             color: #b71c1c;
             display: inline-block;
-            padding: 3px 12px;
+            padding: 5px 15px;
             border-radius: 50px;
             font-size: 13px;
             font-weight: 800;
@@ -107,17 +107,14 @@
         }
         .enroll-btn:hover { background: var(--secondary-color); }
 
-        /* Highlight for PCMMB Combo */
-        .combo-card {
-            border: 3px solid #ff9800;
-        }
+        .combo-card { border: 3px solid #ff9800; }
 
-        /* --- Footer --- */
         .footer { background: #1c1c1c; color: #f4f4f4; padding: 50px 0; margin-top: 60px; }
         .footer-container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; }
         
         @media (max-width: 768px) {
             .nav-links { display: none; }
+            .page-title h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -137,17 +134,17 @@
     </header>
 
     <div class="page-title">
-        <h1>বিষয়ভিত্তিক কোর্সসমূহ</h1>
-         <p>ACS Future School Class 10 - এর আলাদা যেকোনো সাবজেক্ট এ ভর্তি হোন ডিসকাউন্টে 🚀</p>
-        <p>প্রতিটি কার্ডে <b>অ্যাফিলিয়েট ডিসকাউন্ট</b> যুক্ত করা আছে</p>
-        
+        <h1>বিষয়ভিত্তিক কোর্সসমূহ</h1>
+        <p>ACS Future School Class 10 - এর আলাদা যেকোনো সাবজেক্ট এ ভর্তি হোন ডিসকাউন্টে 🚀</p>
+        <p>প্রতিটি কার্ডে <b>অ্যাফিলিয়েট ডিসকাউন্ট</b> যুক্ত করা আছে</p>
     </div>
 
     <main class="container">
         <div class="subject-grid">
             
             <div class="course-card combo-card">
-                <img src="pcmmb.jpeg" alt="PCMMB Combo" class="card-banner"> <div class="card-content">
+                <img src="pcmmb.jpeg" alt="PCMMB Combo" class="card-banner">
+                <div class="card-content">
                     <div class="discount-badge">SPECIAL COMBO DISCOUNT</div>
                     <h3>Science Pack (PCMMB)</h3>
                     <p style="font-size: 0.9rem; color: #666;">Physics + Chemistry + Math + Higher Math + Biology</p>
@@ -155,7 +152,7 @@
                         <span class="old-p">৮৫০০৳</span>
                         <span class="new-p">৮০০০৳</span>
                     </div>
-                    <a href="https://acsfs.com/0SnA5" class="enroll-btn">একসাথে ৫টি বিষয় কিনুন</a>
+                    <a href="https://acsfs.com/0SnA5" class="enroll-btn">একসাথে ৫টি বিষয় কিনুন</a>
                 </div>
             </div>
 
@@ -186,7 +183,7 @@
             </div>
 
             <div class="course-card">
-                <img src="hm.jpeg" alt="general Math" class="card-banner">
+                <img src="hm.jpeg" alt="Higher Math" class="card-banner">
                 <div class="card-content">
                     <div class="discount-badge">DISCOUNT APPLIED ✓</div>
                     <h3>Higher Math</h3>
@@ -198,8 +195,8 @@
                 </div>
             </div>
 
-                    <div class="course-card">
-                <img src="gm.jpeg" alt="Higher Math" class="card-banner">
+            <div class="course-card">
+                <img src="gm.jpeg" alt="General Math" class="card-banner">
                 <div class="card-content">
                     <div class="discount-badge">DISCOUNT APPLIED ✓</div>
                     <h3>General Math</h3>
