@@ -1,175 +1,249 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Class 10 Subject Wise Admission | ACS Future School</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject Wise Courses | ACS Class 10 / SSC '27</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables (Same as main page for consistency) */
+        :root {
+            --primary-color: #4a148c;
+            --secondary-color: #00bcd4;
+            --accent-color: #ff9800;
+            --background-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            --text-dark: #333;
+            --text-light: #555;
+            --white: #ffffff;
+        }
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins','Hind Siliguri', sans-serif;
-      background: #f5f7fa;
-      color: #333;
-    }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', 'Hind Siliguri', sans-serif; 
+            background: var(--background-gradient); 
+            color: var(--text-dark); 
+            line-height: 1.6;
+        }
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 0 20px;
-    }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-    /* ===== Banner ===== */
-    .subject-banner {
-      background: linear-gradient(135deg, #4a148c, #7b1fa2);
-      color: white;
-      padding: 70px 20px;
-      text-align: center;
-    }
+        /* --- Navbar Styles (Same as provided) --- */
+        .navbar { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 10px 0; position: sticky; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .navbar-container { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .nav-logo img { width: 50px; height: auto; }
+        .nav-links { display: flex; gap: 5px; align-items: center; }
+        .nav-links a { color: var(--primary-color); text-decoration: none; padding: 8px 15px; font-size: 16px; font-weight: 600; border-radius: 5px; }
+        .menu-icon { display: none; cursor: pointer; }
+        .menu-icon div { width: 25px; height: 3px; background-color: var(--primary-color); margin: 5px 0; }
 
-    .subject-banner h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
+        /* --- Custom Subject Banner --- */
+        .subject-banner {
+            background: linear-gradient(45deg, #4a148c, #00bcd4);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            margin-bottom: 50px;
+        }
+        .subject-banner h1 { font-size: 2.5rem; margin-bottom: 15px; font-weight: 800; }
+        .subject-banner p { font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: 0 auto; }
 
-    .subject-banner p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
+        /* --- Subject Cards Grid --- */
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+        .subject-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: 0.3s;
+            border: 1px solid #eee;
+        }
+        .subject-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.15); }
+        .subject-icon { font-size: 50px; margin-bottom: 15px; }
+        .subject-card h3 { color: var(--primary-color); font-size: 1.5rem; margin-bottom: 10px; }
+        .subject-price { font-size: 1.5rem; font-weight: 800; color: #e91e63; margin: 10px 0; }
+        .subject-features { list-style: none; text-align: left; margin: 20px 0; font-size: 14px; color: var(--text-light); }
+        .subject-features li { margin-bottom: 8px; }
+        .subject-features li::before { content: "• "; color: var(--secondary-color); font-weight: bold; }
 
-    /* ===== Subject Section ===== */
-    .subjects {
-      padding: 60px 0;
-    }
+        .enroll-btn {
+            display: block;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+        .enroll-btn:hover { background: #311b92; }
 
-    .subjects h2 {
-      text-align: center;
-      font-size: 2rem;
-      color: #4a148c;
-      margin-bottom: 40px;
-    }
-
-    .subject-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 25px;
-    }
-
-    .subject-card {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .subject-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .subject-card h3 {
-      color: #4a148c;
-      margin-bottom: 10px;
-    }
-
-    .subject-card p {
-      font-size: 0.95rem;
-      color: #555;
-      margin-bottom: 15px;
-    }
-
-    .subject-card a {
-      display: inline-block;
-      padding: 10px 22px;
-      background: #4a148c;
-      color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    .subject-card a:hover {
-      background: #311b92;
-    }
-  </style>
+        /* --- Side Menu & Footer (From your code) --- */
+        .side-menu { height: 100%; width: 0; position: fixed; z-index: 1001; top: 0; left: 0; background-color: white; overflow-x: hidden; transition: 0.5s; padding-top: 60px; box-shadow: 4px 0 10px rgba(0,0,0,0.2); }
+        .footer { background: #1c1c1c; color: #f4f4f4; padding: 50px 0; margin-top: 60px; }
+        .footer-container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; }
+        .footer-col { flex: 1; min-width: 250px; }
+        
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .menu-icon { display: block; }
+            .subject-banner h1 { font-size: 1.8rem; }
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- ===== HEADER (Same as your site) ===== -->
-<header class="navbar">
-  <!-- 👉 এখানে তোমার আগের header code 그대로 থাকবে -->
-</header>
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="nav-logo">
+                <img src="class-10.png" alt="ACS Logo"> 
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="class10.html">Full Course</a>
+                <a href="Panel.html">Teacher Panel</a>
+                <a href="Contact.html">Contact</a>
+            </nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div></div> <div></div> <div></div>
+            </div>
+        </div>
+    </header>
 
-<!-- ===== Banner ===== -->
-<section class="subject-banner">
-  <h1>Class 10 Subject Wise Admission</h1>
-  <p>যেকোনো সাবজেক্ট আলাদা ভাবে ভর্তি হওয়ার সুযোগ</p>
-</section>
-
-<!-- ===== Subjects ===== -->
-<section class="subjects container">
-  <h2>উপলব্ধ সাবজেক্টসমূহ</h2>
-
-  <div class="subject-grid">
-
-    <div class="subject-card">
-      <h3>বাংলা</h3>
-      <p>SSC পরীক্ষার জন্য সম্পূর্ণ বাংলা প্রস্তুতি</p>
-      <a href="admission.html">এই সাবজেক্টে ভর্তি</a>
+    <div class="side-menu" id="sideMenu">
+        <nav class="side-menu-nav">
+            <a href="index.html">Home</a>
+            <a href="class10.html">Full Course</a>
+            <a href="Contact.html">Contact</a>
+            <a href="#" onclick="toggleMenu()">Close ✖</a>
+        </nav>
     </div>
 
-    <div class="subject-card">
-      <h3>ইংরেজি</h3>
-      <p>Grammar + Writing + Reading</p>
-      <a href="admission.html">এই সাবজেক্টে ভর্তি</a>
-    </div>
+    <section class="subject-banner">
+        <div class="container">
+            <h1>বিষয়ভিত্তিক ভর্তি (Subject Wise Enrollment)</h1>
+            <p>আপনার প্রয়োজন অনুযায়ী নির্দিষ্ট বিষয়গুলোতে ভর্তি হয়ে সেরা প্রস্তুতি শুরু করুন। প্রতিটি সাবজেক্টে থাকছে লাইভ ক্লাস ও পূর্ণাঙ্গ সাপোর্ট।</p>
+        </div>
+    </section>
 
-    <div class="subject-card">
-      <h3>গণিত</h3>
-      <p>বেসিক থেকে অ্যাডভান্সড ম্যাথ</p>
-      <a href="admission.html">এই সাবজেক্টে ভর্তি</a>
-    </div>
+    <main class="container">
+        <div class="subject-grid">
+            
+            <div class="subject-card">
+                <div class="subject-icon">🧪</div>
+                <h3>Physics (পদার্থবিজ্ঞান)</h3>
+                <p>SSC '27 Academic Full Preparation</p>
+                <div class="subject-price">২,৫০০৳</div>
+                <ul class="subject-features">
+                    <li>সম্পূর্ণ সিলেবাস কভার</li>
+                    <li>অধ্যায়ভিত্তিক নোট ও PDF</li>
+                    <li>CQ ও MCQ সমাধান ক্লাস</li>
+                    <li>কিউরিওসিটি AI এক্সেস</li>
+                </ul>
+                <a href="#" class="enroll-btn">ভর্তি হোন</a>
+            </div>
 
-    <div class="subject-card">
-      <h3>পদার্থবিজ্ঞান</h3>
-      <p>Concept + Problem Solving</p>
-      <a href="admission.html">এই সাবজেক্টে ভর্তি</a>
-    </div>
+            <div class="subject-card">
+                <div class="subject-icon">⚗️</div>
+                <h3>Chemistry (রসায়ন)</h3>
+                <p>SSC '27 Academic Full Preparation</p>
+                <div class="subject-price">২,৫০০৳</div>
+                <ul class="subject-features">
+                    <li>মৌলিক ধারণা থেকে বিস্তারিত</li>
+                    <li>প্র্যাকটিক্যাল ও বিক্রিয়া বিশেষ ক্লাস</li>
+                    <li>ডেইলি কুইজ ও এক্সাম</li>
+                    <li>সাপ্তাহিক Doubt Solve</li>
+                </ul>
+                <a href="#" class="enroll-btn">ভর্তি হোন</a>
+            </div>
 
-    <div class="subject-card">
-      <h3>রসায়ন</h3>
-      <p>Theory + Practical Ready</p>
-      <a href="admission.html">এই সাবজেক্টে ভর্তি</a>
-    </div>
+            <div class="subject-card">
+                <div class="subject-icon">📐</div>
+                <h3>Higher Math (উচ্চতর গণিত)</h3>
+                <p>SSC '27 Academic Full Preparation</p>
+                <div class="subject-price">৩,০০০৳</div>
+                <ul class="subject-features">
+                    <li>সবগুলো চ্যাপ্টারের সহজ সমাধান</li>
+                    <li>জ্যামিতি ও ত্রিকোণমিতি স্পেশাল</li>
+                    <li>বিগত বছরের বোর্ড প্রশ্ন সলভ</li>
+                    <li>পার্সোনাল মেন্টরশিপ</li>
+                </ul>
+                <a href="#" class="enroll-btn">ভর্তি হোন</a>
+            </div>
 
-    <div class="subject-card">
-      <h3>জীববিজ্ঞান</h3>
-      <p>Diagram + MCQ + CQ</p>
-      <a href="admission.html">এই সাবজেক্টে ভর্তি</a>
-    </div>
+            <div class="subject-card">
+                <div class="subject-icon">🧬</div>
+                <h3>Biology (জীববিজ্ঞান)</h3>
+                <p>SSC '27 Academic Full Preparation</p>
+                <div class="subject-price">২,০০০৳</div>
+                <ul class="subject-features">
+                    <li>চিত্রভিত্তিক সহজ লেকচার</li>
+                    <li>মেডিকেল স্ট্যান্ডার্ড বেসিক</li>
+                    <li>সম্পূর্ণ ডিজিটাল নোটস</li>
+                    <li>উইকলি রিভিশন টেস্ট</li>
+                </ul>
+                <a href="#" class="enroll-btn">ভর্তি হোন</a>
+            </div>
 
-    <div class="subject-card">
-      <h3>ICT</h3>
-      <p>Complete ICT for SSC</p>
-      <a href="admission.html">এই সাবজেক্টে ভর্তি</a>
-    </div>
+            <div class="subject-card" style="border: 2px solid var(--secondary-color);">
+                <div class="subject-icon">📚</div>
+                <h3>General Bundle</h3>
+                <p>বাংলা, ইংরেজি, আইসিটি ও অন্যান্য</p>
+                <div class="subject-price">৬,০০০৳</div>
+                <ul class="subject-features">
+                    <li>সবগুলো সাধারণ বিষয় একসাথে</li>
+                    <li>পুরো ১ বছরের এক্সেস</li>
+                    <li>সেরা শিক্ষকদের ক্লাস</li>
+                    <li>বোর্ড পরীক্ষার পূর্ণাঙ্গ প্রস্তুতি</li>
+                </ul>
+                <a href="#" class="enroll-btn" style="background: var(--secondary-color);">বান্ডেলটি কিনুন</a>
+            </div>
 
-    <div class="subject-card">
-      <h3>সাধারণ গণিত / সাধারণ বিজ্ঞান</h3>
-      <p>General subjects full preparation</p>
-      <a href="admission.html">এই সাবজেক্টে ভর্তি</a>
-    </div>
+        </div>
+    </main>
 
-  </div>
-</section>
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h4 style="color: white;">ACS Future School</h4>
+                <p>শিক্ষার্থীদের আধুনিক ও কার্যকরী শিক্ষা প্রদানে আমরা প্রতিশ্রুতিবদ্ধ। আমাদের সাথে আপনার লক্ষ্য হোক সহজ।</p>
+            </div>
+            <div class="footer-col">
+                <h4>গুরুত্বপূর্ণ লিংক</h4>
+                <ul style="list-style: none;">
+                    <li><a href="about.html" style="color: #ccc; text-decoration: none;">আমাদের সম্পর্কে</a></li>
+                    <li><a href="Contact.html" style="color: #ccc; text-decoration: none;">যোগাযোগ</a></li>
+                    <li><a href="Policy.html" style="color: #ccc; text-decoration: none;">প্রাইভেসি পলিসি</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>যোগাযোগ</h4>
+                <p>📧 afsaffiliate@gmail.com</p>
+                <p>📞 +8801778682815</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 30px; border-top: 1px solid #333; padding-top: 20px;">
+            <p>&copy; 2025 ACS Future School. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-<!-- ===== FOOTER (Same as your site) ===== -->
-<footer class="footer">
-  <!-- 👉 এখানে তোমার আগের footer code 그대로 থাকবে -->
-</footer>
+    <script>
+        function toggleMenu() {
+            const sideMenu = document.getElementById("sideMenu");
+            sideMenu.style.width = sideMenu.style.width === "250px" ? "0" : "250px";
+        }
+    </script>
 
 </body>
 </html>
