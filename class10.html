@@ -234,39 +234,42 @@
   background: #f5f7fa;
   text-align: center;
 }
+        .admission-section {
+  padding: 50px 20px;
+  background: #f3f4f6;
+  text-align: center;
+}
 
-.subject-section h2 {
+.admission-section h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.admission-section p {
+  font-size: 16px;
+  color: #4b5563;
   margin-bottom: 25px;
-  font-size: 28px;
-  color: #333;
 }
 
-.subject-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
-  max-width: 700px;
-  margin: auto;
-}
-
-.subject-card {
-  display: block;
-  padding: 20px;
-  background: #ffffff;
-  color: #222;
+.admission-btn {
+  display: inline-block;
+  padding: 15px 35px;
+  background: #2563eb;
+  color: #ffffff;
   text-decoration: none;
+  font-size: 18px;
   font-weight: 600;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
+  border-radius: 8px;
+  transition: 0.3s;
 }
 
-.subject-card:hover {
-  background: #4f46e5;
-  color: #fff;
-  transform: translateY(-5px);
+.admission-btn:hover {
+  background: #1e40af;
+  transform: scale(1.05);
 }
-    </style>
+
+</style>
 </head>
 <body>
 
@@ -324,18 +327,17 @@
         <section class="section" id="courses">
             <h1 class="section-title">ACS Class 10 / SSC '27 Academic Program 2026</h1>
             <p class="section-subtitle">Class 10 (SSC '27 ব্যাচ)-এর সম্পূর্ণ বছরের সেরা প্রস্তুতি নিশ্চিত করুন। Affiliate(agent) ডিসকাউন্ট এই মাসের মধ্যে প্রযোজ্য! দ্রুত আপনার প্যাকেজটি বেছে নিন।</p>
-            
-            <div class="pricing-container">
-                <section class="subject-section">
-  <h2>Choose Your Subject</h2>
+            <section class="admission-section">
+  <h2>Admission Open</h2>
+  <p>Subject wise admission is available. Click below to apply.</p>
 
-  <div class="subject-grid">
-    <a href="science.html" class="subject-card">Science</a>
-    <a href="commerce.html" class="subject-card">Commerce</a>
-    <a href="arts.html" class="subject-card">Arts</a>
-    <a href="computer.html" class="subject-card">Computer</a>
-  </div>
+  <a href="admission.html" class="admission-btn">
+    Subject Wise Admission
+  </a>
 </section>
+
+            <div class="pricing-container">
+
 
 
                 <div class="pricing-card featured" style="order: 1;">
