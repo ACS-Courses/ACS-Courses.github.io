@@ -1,6 +1,6 @@
 // --- Configuration ---
 const adImage = "ramadan-discount.jpg"; // Apnar chobir file name ba link
-const waLink = "https://wa.me/8801778682815"; // Apnar WhatsApp link
+const waLink = "https://wa.me/8801778682815?text=রমাদান%20স্পেশাল%20ডিসকাউন্ট%20চাই"; // Apnar WhatsApp link
 const promoText = "Ramadan Special Discount! 🌙";
 const promoDetails = "রমাদান স্পেশাল ডিসকাউন্ট : ১,৫০০৳ (ফুল কোর্সে) | ৬ মাসের কোর্সে ৭০০৳ রমাদান স্পেশাল ডিসকাউন্ট কীভাবে পাবেন তা জানতে এখনই হোয়াটসঅ্যাপে যোগাযোগ করুন।";
 
