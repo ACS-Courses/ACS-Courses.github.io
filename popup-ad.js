@@ -1,8 +1,8 @@
 // --- Configuration ---
-const adImage = "ramadan-discount.jpg"; // Apnar chobir file name ba link
-const waLink = "https://wa.me/8801778682815?text=রমাদান%20স্পেশাল%20ডিসকাউন্ট%20চাই"; // Apnar WhatsApp link
-const promoText = "Ramadan Special Discount! 🌙";
-const promoDetails = "রমাদান স্পেশাল ডিসকাউন্ট : ১,৫০০৳ (ফুল কোর্সে) | ৬ মাসের কোর্সে ৭০০৳ রমাদান স্পেশাল ডিসকাউন্ট কীভাবে পাবেন তা জানতে এখনই হোয়াটসঅ্যাপে যোগাযোগ করুন।";
+const adImage = "Gemini_Generated_Image_krw8cqkrw8cqkrw8 (1).png"; // Apnar chobir file name ba link
+const waLink = "https://wa.me/8801778682815?text=এই%20বছরের%20সর্বোচ্চ%20ডিসকাউন্ট%20চাই"; // Apnar WhatsApp link
+const promoText = "🚀 বছরের সেরা অফার! হাতছাড়া করলেই মিস!";
+const promoDetails = "এই বছরের সর্বোচ্চ ডিসকাউন্ট: আমাদের কাছ থেকে পাচ্ছেন ACS Future School-এর এই বছরের সর্বোচ্চ ডিসকাউন্ট। কামব্যাক ডিসকাউন্ট। এখনই যোগাযোগ করুন এই ডিসকাউন্ট পেতে।";
 
 // --- Function to inject CSS ---
 const style = document.createElement('style');
