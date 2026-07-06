@@ -52,6 +52,62 @@
         .btn.secondary-btn { background-color: var(--secondary-color); } .btn.secondary-btn:hover { background-color: #0097a7; }
         .btn.whatsapp { background-color: #25d366; } .btn.whatsapp:hover { background-color: #128C7E; }
 
+        /* --- FRB Announcement Banner Style --- */
+        .frb-announcement-banner {
+            background: linear-gradient(135deg, #1a237e 0%, #4a148c 100%);
+            color: white;
+            padding: 35px 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(74, 20, 140, 0.4);
+            margin: 0 auto 30px auto;
+            max-width: 850px;
+            text-align: center;
+            border: 2px solid #00bcd4;
+            position: relative;
+            overflow: hidden;
+        }
+        .frb-announcement-banner::before {
+            content: 'NEW';
+            position: absolute;
+            top: 15px;
+            left: -30px;
+            background: #ff9800;
+            color: white;
+            padding: 4px 35px;
+            font-size: 11px;
+            font-weight: bold;
+            transform: rotate(-45deg);
+        }
+        .frb-announcement-banner h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #00bcd4;
+            font-weight: 800;
+        }
+        .frb-announcement-banner p {
+            font-size: 1.05rem;
+            color: #e0e0e0;
+            max-width: 650px;
+            margin: 0 auto 20px auto;
+            font-weight: 500;
+        }
+        .frb-announcement-banner .frb-btn {
+            display: inline-block;
+            padding: 12px 35px;
+            background: #ff9800;
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 700;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+            transition: 0.3s ease;
+        }
+        .frb-announcement-banner .frb-btn:hover {
+            background: #e65100;
+            transform: scale(1.05);
+        }
+
         /* --- Pricing Card Style --- */
         .pricing-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 40px; }
         .pricing-card { 
@@ -300,6 +356,12 @@
             <h1 class="section-title">ACS Class 10 / SSC '27 Academic Program 2026</h1>
             <p class="section-subtitle">Class 10 (SSC '27 ব্যাচ)-এর সম্পূর্ণ বছরের সেরা প্রস্তুতি নিশ্চিত করুন। Affiliate(agent) ডিসকাউন্ট এই মাসের মধ্যে প্রযোজ্য! দ্রুত আপনার প্যাকেজটি বেছে নিন।</p>
             
+            <section class="frb-announcement-banner">
+                <h3>📢 ACS SSC 27 FRB | Final Revision Batch Launched!</h3>
+                <p>এসএসসি ২০২৭ ব্যাচের পরীক্ষার্থীদের জন্য ACS Future School নিয়ে এলো বিশেষ ফাইনাল রিভিশন ব্যাচ (ACS Class 10 FRB)। লিমিটেড টাইমের জন্য আকর্ষণীয় প্রি-বুক ডিসকাউন্ট অফার উপভোগ করতে এখনই নিচের বাটনে ক্লিক করে বিস্তারিত দেখে নাও!</p>
+                <a href="acs-ssc-27-frb.html" class="frb-btn">বিস্তারিত দেখুন 🚀</a>
+            </section>
+
             <section class="admission-section">
                 <h2>আলাদা আলাদা সাবজেক্ট এ ভর্তি হতে পারবেন</h2>
                 <p>Subject wise admission is available. Click below to enroll.</p>
@@ -475,7 +537,7 @@
                 </div>
                 
                 <div class="feature-card-new">
-                    <h3><div class="feature-icon">🧠</div> Oneshot ও আর্কাইভ ক্লাস (২০২৫)</h3>
+                    <h3><div class="feature-icon">🧠</div> Oneshot ও архив ক্লাস (২০২৫)</h3>
                     <p>স্কুলের সিলেবাসের পার্থক্য মেটাতে প্রত্যেক অধ্যায়ের জন্য Oneshot ক্লাস। এছাড়াও Academic Program 2026 এর সকল শিক্ষার্থী গতবছরের (২০২৫) ক্লাসের আর্কাইভে এক্সেস পাবে।</p>
                 </div>
                 
@@ -560,14 +622,13 @@
 
         // 3. Countdown Timer Script (Perfectly loops every 7 days)
         function startTimer() {
-            // একটি নির্দিষ্ট শুরুর সময় (যেকোনো অতীত তারিখ যেমন ২০২৪ সালের ১ জানুয়ারি)
             const referenceDate = new Date("2024-01-01T00:00:00").getTime();
-            const cycle = 7 * 24 * 60 * 60 * 1000; // ৭ দিনের সময়সীমা মিলি-সেকেন্ডে
+            const cycle = 7 * 24 * 60 * 60 * 1000; 
 
             setInterval(() => {
                 const now = new Date().getTime();
                 const elapsed = now - referenceDate;
-                const timeLeft = cycle - (elapsed % cycle); // সবসময় ৭ দিনের চক্রে হিসাব করবে
+                const timeLeft = cycle - (elapsed % cycle); 
 
                 const d = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
                 const h = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
