@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ================= SEO OPTIMIZATION START ================= -->
+    <title>ACS FRB 27 | SSC27 FRB ACS Course Details & Routine 2026</title>
+    
+    <meta name="description" content="ACS FRB 27 কোর্সে SSC 2027 ব্যাচের ফুল সিলেবাস রিভিশন, দেশসেরা শিক্ষকদের গাইডেন্স, মডেল টেস্ট ও Gift Playlist থাকছে। আজই SSC27 FRB ACS ব্যাচে যুক্ত হয়ে সেরা প্রস্তুতি নাও!">
+    
+    <meta name="keywords" content="ACS FRB 27, SSC27 FRB ACS, SSC 27 Final Revision Batch, ACS Class 10 FRB, ACS Future School SSC 27, ACS SSC 2027 preparation, SSC Revision Course">
+    
+    <meta name="author" content="ACS Future School Affiliate">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="ACS FRB 27 | SSC 2027 Final Revision Batch Information">
+    <meta property="og:description" content="SSC 2027 পরীক্ষার্থীদের জন্য ACS FRB 27 ব্যাচের বিস্তারিত রুটিন, সিলেবাস ও সাবজেক্টসমূহ। এখনই যুক্ত হয়ে প্রি-বুক ডিসকাউন্ট লুফে নাও!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://acs-courses.github.io/acs-frb-27-info.html">
+    <!-- ================= SEO OPTIMIZATION END ================= -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #4a148c; 
+            --secondary-color: #00bcd4; 
+            --accent-color: #ff9800; 
+            --background-light: #f4f7f6;
+            --text-dark: #222;
+            --text-light: #555;
+            --science-color: #0056b3;
+            --arts-color: #28a745;
+            --table-border: #e0e0e0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+        body { 
+            font-family: 'Poppins', 'Hind Siliguri', sans-serif; 
+            background-color: var(--background-light); 
+            color: var(--text-dark); 
+            line-height: 1.7;
+        }
+
+        .container { max-width: 1150px; margin: 0 auto; padding: 0 20px; }
+
+        /* --- Navbar --- */
+        .navbar { background: #fff; padding: 12px 0; position: sticky; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+        .navbar-container { display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-size: 1.5rem; font-weight: 800; color: var(--primary-color); text-decoration: none; }
+        .nav-links { display: flex; gap: 15px; }
+        .nav-links a { color: var(--primary-color); text-decoration: none; font-weight: 600; padding: 5px 10px; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent-color); }
+
+        /* --- Hero Section --- */
+        .hero { background: linear-gradient(135deg, #4a148c 0%, #311b92 100%); color: white; padding: 80px 20px; text-align: center; border-radius: 0 0 30px 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 15px; color: #ffeb3b; }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 25px; opacity: 0.9; }
+        .hero-btn { background: #ff9800; color: white; padding: 14px 35px; border-radius: 50px; text-decoration: none; font-size: 1.2rem; font-weight: bold; transition: 0.3s; box-shadow: 0 5px 15px rgba(255, 152, 0, 0.4); display: inline-block; }
+        .hero-btn:hover { background: #e65100; transform: translateY(-3px); }
+
+        /* --- Content Blocks --- */
+        .section { padding: 60px 0; text-align: center; }
+        .section-title { font-size: 2.2rem; color: var(--primary-color); margin-bottom: 20px; font-weight: 800; }
+        .info-box { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: left; margin-bottom: 30px; border-left: 5px solid var(--secondary-color); }
+        .info-box h2 { font-size: 1.6rem; color: var(--primary-color); margin-bottom: 15px; }
+        
+        /* --- Features Grid --- */
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; text-align: left; margin-top: 30px; }
+        .feature-card { background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.04); border: 1px solid #eee; transition: 0.3s; }
+        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
+        .feature-card h3 { color: var(--primary-color); font-size: 1.3rem; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        .feature-card i { color: var(--accent-color); font-size: 1.5rem; }
+
+        /* --- Subjects Badges --- */
+        .subjects-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 20px; }
+        .subject-badge { background: #e0f7fa; color: #00838f; padding: 8px 18px; border-radius: 30px; font-weight: 600; font-size: 1.1rem; border: 1px solid #b2ebf2; }
+
+        /* --- Routine Table --- */
+        .routine-container { overflow-x: auto; margin-top: 30px; }
+        table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-radius: 10px; overflow: hidden; }
+        th, td { padding: 15px; text-align: center; border-bottom: 1px solid var(--table-border); font-size: 1.05rem; }
+        th { background: var(--primary-color); color: white; font-weight: 700; }
+        tr:hover { background: #f9f9f9; }
+        .gap-row { background: #ffebee !important; color: #c62828; font-weight: bold; }
+
+        /* --- Pricing Section --- */
+        .pricing-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 30px; }
+        .pricing-card { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); width: 350px; text-align: center; position: relative; border-top: 6px solid var(--primary-color); }
+        .pricing-card.science { border-top-color: var(--science-color); }
+        .pricing-card.arts { border-top-color: var(--arts-color); }
+        .prebook-badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #d32f2f; color: white; padding: 5px 20px; border-radius: 30px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 4px 10px rgba(211, 47, 47, 0.4); }
+        .pricing-card h3 { font-size: 1.8rem; margin-bottom: 10px; }
+        .price { font-size: 2.5rem; font-weight: 800; color: #222; margin: 15px 0; }
+        .old-price { text-decoration: line-through; color: #888; font-size: 1.2rem; }
+        .buy-btn { display: block; width: 100%; background: var(--primary-color); color: white; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; margin-top: 20px; transition: 0.3s; }
+        .buy-btn:hover { background: #311b92; }
+        
+        /* --- Internal Links --- */
+        .internal-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 20px; }
+        .internal-links a { background: #e8eaf6; color: var(--primary-color); padding: 10px 20px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: 0.3s; border: 1px solid #c5cae9; }
+        .internal-links a:hover { background: var(--primary-color); color: white; }
+
+        /* --- Footer & WhatsApp --- */
+        .footer { background: #111; color: #eee; padding: 40px 20px; text-align: center; margin-top: 50px; }
+        .footer a { color: var(--secondary-color); text-decoration: none; }
+        
+        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px; background: #25d366; color: white; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 100; transition: 0.3s; }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .nav-links { display: none; } /* Simplified for mobile focus on content */
+            .pricing-card { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="nav-logo">ACS FRB 27 Info</a>
+            <nav class="nav-links">
+                <a href="https://acs-courses.github.io/">Home</a>
+                <a href="https://acs-courses.github.io/acs-ssc-27-frb.html" style="color: var(--accent-color);">FRB Main Page</a>
+                <a href="https://acs-courses.github.io/class10.html">Class 10</a>
+                <a href="#routine">Routine</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SEO Optimized Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>ACS FRB 27: SSC 2027 ব্যাচের সেরা ফাইনাল রিভিশন</h1>
+            <p>তোমরা যারা <strong>SSC27 FRB ACS</strong> ব্যাচে ভর্তি হতে চাচ্ছো, তাদের জন্য এই পেইজে কোর্সের রুটিন, সিলেবাস এবং বিশেষ প্রি-বুক ডিসকাউন্টের বিস্তারিত তথ্য দেওয়া হলো। প্রিটেস্ট পরীক্ষার পর বোর্ড এক্সামের সেরা প্রস্তুতি নিতে আজই যুক্ত হও!</p>
+            <a href="https://acs-courses.github.io/acs-ssc-27-frb.html" class="hero-btn">ভর্তির মূল পেইজে যান 🚀</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Target Group & Explanation -->
+        <section class="section" id="overview">
+            <div class="info-box">
+                <h2>🎯 কাদের জন্য এই কোর্স? (Target Group)</h2>
+                <p><strong>ACS FRB 27</strong> কোর্সটি মূলত <strong>SSC 2027 ব্যাচের</strong> শিক্ষার্থীদের জন্য তৈরি করা হয়েছে। এসএসসি ২৭ ব্যাচের শিক্ষার্থীরা তাদের প্রিটেস্ট (Pre-test) পরীক্ষার পরে আমাদের সাথে SSC পরীক্ষার পূর্ণাঙ্গ প্রস্তুতি নিবে। এই <strong>SSC27 FRB ACS</strong> প্রোগ্রামটি বোর্ড পরীক্ষার আগে তোমাদের সকল দুর্বলতা কাটিয়ে উঠতে সাহায্য করবে।</p>
+                
+                <h3 style="margin-top: 25px; color: var(--primary-color);">📚 যে বিষয়গুলো পড়ানো হবে:</h3>
+                <div class="subjects-container">
+                    <span class="subject-badge">Bangla 1st & 2nd</span>
+                    <span class="subject-badge">English 1st & 2nd</span>
+                    <span class="subject-badge">General Math</span>
+                    <span class="subject-badge">Higher Math</span>
+                    <span class="subject-badge">Physics</span>
+                    <span class="subject-badge">Chemistry</span>
+                    <span class="subject-badge">Biology</span>
+                    <span class="subject-badge">BGS</span>
+                    <span class="subject-badge">ICT</span>
+                    <span class="subject-badge">General Science</span>
+                    <span class="subject-badge">Islam</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Features -->
+        <section class="section" id="features" style="padding-top: 0;">
+            <h2 class="section-title">✨ ACS FRB 27 কোর্সে যা যা থাকছে</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3><i class="fas fa-book-open"></i> ১। ফুল সিলেবাস কভার</h3>
+                    <p>SSC 2027 Batch এর ফুল সিলেবাসের গুরুত্বপূর্ণ বিষয়সমূহের সকল অধ্যায় বিস্তারিত ভাবে কভার করা হবে। বিজ্ঞান, মানবিক ও ব্যবসায় শিক্ষার সকল বিষয় অন্তর্ভুক্ত।</p>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-chalkboard-teacher"></i> ২। দেশসেরা শিক্ষকদের গাইডেন্স</h3>
+                    <p>ঢাকা বিশ্ববিদ্যালয়, বুয়েট, রুয়েট এবং দেশের অভিজ্ঞ শিক্ষকদের সরাসরি তত্ত্বাবধানে <strong>SSC27 FRB ACS</strong> ব্যাচের লাইভ ক্লাসগুলো পরিচালিত হবে।</p>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-laptop-code"></i> ৩। অনলাইন MCQ ও Written Exam</h3>
+                    <p>সিলেবাস শেষের পাশাপাশি অনলাইন MCQ এবং Written Exam থাকছে। সাথে থাকছে সম্পূর্ণ SSC Board Exam এর আঙ্গিকে অনলাইনে ফাইনাল মডেল টেস্ট দেয়ার সুযোগ।</p>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-file-alt"></i> ৪। ফ্রি সাজেশন</h3>
+                    <p>পরীক্ষার আগে পড়াশুনাকে গুছিয়ে শেষ করার জন্য প্রয়োজন একটি গোছানো সাজেশন, যা তোমার <strong>ACS FRB 27</strong> প্রস্তুতিকে করে তুলবে আরো মজবুত।</p>
+                </div>
+                <div class="feature-card" style="grid-column: 1 / -1;">
+                    <h3><i class="fas fa-gift"></i> ৫। স্পেশাল Gift Playlist</h3>
+                    <p>Physics-এর প্রস্তুতি আরও শক্তিশালী করতে থাকছে অপূর্ব ভাইয়া ও মাশুরুর ভাইয়ের Academic Program 26 Physics Playlist, যেখানে গুরুত্বপূর্ণ কনসেপ্ট বিস্তারিত আলোচনা করা হয়েছে। এছাড়াও বিগতবছরের Final Revision Batch 2026-এর সকল বিষয়ের ক্লাস ও রিভিশন কনটেন্টের প্লেলিস্ট দেখার সুযোগ থাকবে!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Routine / Schedule -->
+        <section class="section" id="routine" style="padding-top: 0;">
+            <h2 class="section-title">📅 SSC27 FRB ACS কোর্স রুটিন (Schedule)</h2>
+            <p>স্টুডেন্টদের সুবিধার কথা মাথায় রেখে আমাদের <strong>ACS FRB 27</strong> রুটিনটি সাজানো হয়েছে।</p>
+            
+            <div class="routine-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ইভেন্ট (Title)</th>
+                            <th>শুরুর তারিখ (Start Date)</th>
+                            <th>শেষের তারিখ (End Date)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Class P-1</strong></td>
+                            <td>Saturday, August 15, 2026</td>
+                            <td>Friday, October 30, 2026</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Exam P-1</strong></td>
+                            <td>Sunday, August 16, 2026</td>
+                            <td>Sunday, November 1, 2026</td>
+                        </tr>
+                        <tr class="gap-row">
+                            <td colspan="3"><i class="fas fa-exclamation-circle"></i> নভেম্বর ১ থেকে নভেম্বর ১২ পর্যন্ত ১২ দিনের ছুটির গ্যাপ থাকছে, কারণ Maximum School-এর Test Exam এই সময়ে অনুষ্ঠিত হবে।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Class P-2</strong></td>
+                            <td>Thursday, November 12, 2026</td>
+                            <td>Saturday, December 12, 2026</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Exam P-2</strong></td>
+                            <td>Thursday, November 12, 2026</td>
+                            <td>Saturday, December 12, 2026</td>
+                        </tr>
+                        <tr style="background: #e3f2fd; font-weight: bold;">
+                            <td><strong>Final Model Test</strong></td>
+                            <td>Tuesday, December 15, 2026</td>
+                            <td>Wednesday, December 30, 2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="section" id="pricing" style="padding-top: 0;">
+            <h2 class="section-title">💰 ACS FRB 27 কোর্স প্রাইসিং</h2>
+            
+            <div class="pricing-grid">
+                <!-- Regular / Science Pricing -->
+                <div class="pricing-card science">
+                    <div class="prebook-badge">Pre-book Discount!</div>
+                    <h3 style="color: var(--science-color);">Regular / Science</h3>
+                    <p>বিজ্ঞানের সকল বিষয়</p>
+                    <p class="old-price">Listed Price: 5000 ৳ | Regular: 3500 ৳</p>
+                    <div class="price">3000 ৳</div>
+                    <p style="font-weight: 600; color: #d32f2f;">Floor Price / Prebook Price</p>
+                    <a href="https://afs.bd/KpBfEu" class="buy-btn" style="background: var(--science-color);">এখনই ভর্তি হও</a>
+                </div>
+
+                <!-- Arts & Commerce Pricing -->
+                <div class="pricing-card arts">
+                    <div class="prebook-badge">Pre-book Discount!</div>
+                    <h3 style="color: var(--arts-color);">Arts / Commerce</h3>
+                    <p>মানবিক ও ব্যবসায় শিক্ষা</p>
+                    <p class="old-price">Listed Price: 3000 ৳ | Regular: 2000 ৳</p>
+                    <div class="price">1750 ৳</div>
+                    <p style="font-weight: 600; color: #d32f2f;">Floor Price / Prebook Price</p>
+                    <a href="https://afs.bd/zhmMlC" class="buy-btn" style="background: var(--arts-color);">এখনই ভর্তি হও</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Internal Links Networking -->
+        <section class="section" style="padding-top: 0;">
+            <h2 class="section-title" style="font-size: 1.8rem;">🔗 অন্যান্য গুরুত্বপূর্ণ লিংকসমূহ</h2>
+            <p>আমাদের ওয়েবসাইটের অন্যান্য পেইজ ও কোর্সের বিস্তারিত জানতে নিচের লিংকগুলোতে ভিজিট করতে পারো:</p>
+            <div class="internal-links">
+                <a href="https://acs-courses.github.io/">🏠 ACS Home Page</a>
+                <a href="https://acs-courses.github.io/acs-ssc-27-frb.html">🎯 SSC27 FRB ACS Main Course</a>
+                <a href="https://acs-courses.github.io/class10.html">📘 Class 10 Academic</a>
+                <a href="https://acs-courses.github.io/class9.html">📗 Class 9</a>
+                <a href="https://acs-courses.github.io/class8.html">📙 Class 8</a>
+                <a href="https://acs-courses.github.io/class7.html">📕 Class 7</a>
+                <a href="https://acs-courses.github.io/class6.html">📓 Class 6</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p><strong>ACS Future School</strong> - Empowering the students of tomorrow.</p>
+            <p style="margin-top: 10px;">যেকোনো সাহায্যে যোগাযোগ করুন: 📞 <a href="tel:+8801778682815" style="color: #fff; font-weight: bold;">01778682815</a></p>
+            <p style="font-size: 0.85em; margin-top: 15px; color: #888;">&copy; 2026 ACS Future School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/8801778682815?text=আমি%20ACS%20FRB%2027%20কোর্স%20সম্পর্কে%20জানতে%20চাই" class="whatsapp-float" target="_blank" title="Talk to Support">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
