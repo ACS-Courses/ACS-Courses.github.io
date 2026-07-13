@@ -26,6 +26,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
         /* --- Root Variables --- */
@@ -39,8 +40,8 @@
             --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
             --text-dark: #2c3e50;
             --text-light: #555;
-            --new-highlight: #e6f7ff; /* Light blue for new sections */
-            --new-border: #007bff; /* Blue border for new sections */
+            --new-highlight: #e6f7ff; 
+            --new-border: #007bff; 
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -57,7 +58,7 @@
         .section { padding: 50px 0; }
         .hidden { display: none; }
 
-        /* --- Navbar (Existing Styles) --- */
+        /* --- Navbar --- */
         .navbar { 
             background: rgba(255, 255, 255, 0.95); 
             backdrop-filter: blur(10px); 
@@ -92,7 +93,7 @@
         .dropdown-content a { color: var(--text-dark); padding: 10px 20px; display: block; width: 100%; text-align: left; }
         .dropdown-content a:hover { background-color: #f8f9fa; color: var(--primary-color); }
 
-        /* Mobile Menu (Existing Styles) */
+        /* Mobile Menu */
         .menu-icon { display: none; cursor: pointer; }
         .menu-icon div { width: 25px; height: 3px; background-color: var(--primary-color); margin: 5px 0; transition: 0.4s; }
         .side-menu { 
@@ -113,20 +114,38 @@
         .accordion-toggle::after { content: '▼'; font-size: 14px; transition: transform 0.3s; color: var(--primary-color); }
         .accordion-toggle.active::after { transform: rotate(180deg); }
 
-        /* --- Hero Section (Existing Styles) --- */
+        /* --- Hero Section (Updated with Cards instead of Video) --- */
         .hero-title { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 15px; font-weight: 800; line-height: 1.2; text-align: center; }
         .hero-sub { color: var(--text-light); margin-bottom: 30px; font-size: 1.2rem; text-align: center; }
-        .video-wrapper {
-            max-width: 800px; margin: 0 auto; border-radius: 20px; 
-            overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.2); border: 5px solid white;
-            aspect-ratio: 16/9;
-        }
-        .video-wrapper iframe { width: 100%; height: 100%; }
         
-        /* --- NEW BUTTON STYLE --- */
-        .hero-action-btn {
-            display: flex; justify-content: center; margin-top: 30px;
+        .hero-explore-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
         }
+        .hero-explore-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .hero-explore-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .hero-explore-card i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero-action-btn { display: flex; justify-content: center; margin-top: 40px; }
         .hero-action-btn a {
             background-color: var(--accent-color);
             color: white;
@@ -138,15 +157,54 @@
             transition: 0.3s;
             box-shadow: 0 8px 15px rgba(255, 152, 0, 0.4);
         }
-        .hero-action-btn a:hover {
-            background-color: #e68a00;
-            transform: translateY(-2px);
+        .hero-action-btn a:hover { background-color: #e68a00; transform: translateY(-2px); }
+
+        /* --- Popular Course Section --- */
+        .popular-course-section {
+            background: #ffffff;
+            padding: 40px 20px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            border: 2px dashed var(--primary-color);
+            margin: 40px 0;
+            text-align: center;
+        }
+        .popular-course-section h2 { color: var(--primary-color); font-size: 2rem; margin-bottom: 15px; font-weight: 800; }
+        .popular-course-section p { font-size: 1.1rem; color: var(--text-light); margin-bottom: 30px; }
+        .popular-course-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+        .popular-course-card {
+            background: linear-gradient(135deg, #f0e6f7 0%, #e0c3fc 100%);
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(74, 20, 140, 0.2);
+            text-decoration: none;
+            transition: 0.3s;
+            border-left: 5px solid var(--primary-color);
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .popular-course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(74, 20, 140, 0.3);
+            background: linear-gradient(135deg, #e0c3fc 0%, #d1c4e9 100%);
+        }
+        .popular-course-card h3 { color: var(--primary-color); font-size: 1.5rem; margin-bottom: 10px; font-weight: 800; }
+        .popular-course-card span {
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-top: 10px;
         }
 
-        /* --- Discount Section (Updated Styles) --- */
+        /* --- Discount Section (Updated) --- */
         .discount-steps-container {
             background: white; padding: 40px 20px; border-radius: 15px; margin-top: 40px; box-shadow: var(--shadow);
-            border: 2px solid var(--accent-color); /* Highlight for discount */
+            border: 2px solid var(--accent-color); 
         }
         .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; margin-top: 30px; }
         .step-card { text-align: center; padding: 20px; background: #f8f9fa; border-radius: 10px; position: relative; }
@@ -162,152 +220,51 @@
             text-align: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        .discount-highlight span { font-size: 1.2rem; color: #d63384; font-weight: 900; }
+        .discount-highlight span { font-size: 1.2rem; color: #d32f2f; font-weight: 900; }
         .discount-highlight ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
+            list-style: none; padding: 0; margin-top: 10px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;
         }
-        .discount-highlight ul li {
-            background: rgba(255, 255, 255, 0.5);
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-weight: 600;
-        }
+        .discount-highlight ul li { background: rgba(255, 255, 255, 0.6); padding: 8px 15px; border-radius: 5px; font-weight: 600; }
 
-        /* --- Package Description Section (Existing Styles) --- */
+        /* --- Package Description Section --- */
         .package-description-section {
-            background: var(--new-highlight);
-            padding: 40px 20px;
-            border-radius: 15px;
-            margin-bottom: 40px;
-            border-left: 5px solid var(--new-border);
+            background: var(--new-highlight); padding: 40px 20px; border-radius: 15px; margin-bottom: 40px; border-left: 5px solid var(--new-border);
         }
-        .package-description-section h3 {
-            text-align: center;
-            color: var(--primary-color);
-            margin-bottom: 25px;
-            font-weight: 800;
-            font-size: 1.8rem;
-        }
-        .package-grid {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .package-card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            flex: 1 1 300px;
-            min-width: 250px;
-            border-top: 3px solid var(--secondary-color);
-        }
-        .package-card h4 {
-            color: var(--secondary-color);
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-        .package-card p {
-            font-size: 0.95rem;
-            color: var(--text-light);
-        }
+        .package-description-section h3 { text-align: center; color: var(--primary-color); margin-bottom: 25px; font-weight: 800; font-size: 1.8rem; }
+        .package-grid { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+        .package-card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); flex: 1 1 300px; min-width: 250px; border-top: 3px solid var(--secondary-color); }
+        .package-card h4 { color: var(--secondary-color); margin-bottom: 10px; font-size: 1.2rem; }
+        .package-card p { font-size: 0.95rem; color: var(--text-light); }
 
-        /* --- Courses Grid (Updated Styles) --- */
-        .course-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px; margin-top: 30px;
-        }
-        /* Added ID for anchor link */
-        .course-section-heading {
-            text-align: center; color: var(--primary-color); margin-bottom: 30px; font-weight: 800;
-        }
-        .course-card {
-            background: var(--card-background); padding: 30px; border-radius: 20px;
-            box-shadow: var(--shadow); transition: all 0.3s; border-top: 5px solid var(--primary-color);
-            text-align: center;
-        }
+        /* --- Courses Grid --- */
+        .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; }
+        .course-section-heading { text-align: center; color: var(--primary-color); margin-bottom: 30px; font-weight: 800; }
+        .course-card { background: var(--card-background); padding: 30px; border-radius: 20px; box-shadow: var(--shadow); transition: all 0.3s; border-top: 5px solid var(--primary-color); text-align: center; }
         .course-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
         .course-card h3 { font-size: 1.6rem; margin: 15px 0; }
-        .btn {
-            display: inline-block; padding: 12px 30px; font-size: 15px; color: white; background-color: var(--primary-color); 
-            text-decoration: none; border-radius: 50px; font-weight: 700; transition: 0.3s; border: none; cursor: pointer; width: 100%; box-shadow: 0 5px 15px rgba(74, 20, 140, 0.3);
-        }
+        .btn { display: inline-block; padding: 12px 30px; font-size: 15px; color: white; background-color: var(--primary-color); text-decoration: none; border-radius: 50px; font-weight: 700; transition: 0.3s; border: none; cursor: pointer; width: 100%; box-shadow: 0 5px 15px rgba(74, 20, 140, 0.3); }
         .btn:hover { background-color: #311b92; transform: translateY(-2px); }
         .discount-note { font-size: 13px; color: #dc3545; margin-top: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 5px; }
 
-        /* --- FAQ Section (Updated Styles) --- */
-        .faq-section {
-            padding: 50px 0;
-        }
-        .faq-heading {
-            text-align: center; color: var(--primary-color); margin-bottom: 30px; font-weight: 800;
-        }
-        .faq-item {
-            background: white; margin-bottom: 15px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-        .faq-question {
-            padding: 18px 25px; background: #f7f7f7; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--primary-color); transition: background 0.3s;
-        }
+        /* --- FAQ Section --- */
+        .faq-section { padding: 50px 0; }
+        .faq-heading { text-align: center; color: var(--primary-color); margin-bottom: 30px; font-weight: 800; }
+        .faq-item { background: white; margin-bottom: 15px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .faq-question { padding: 18px 25px; background: #f7f7f7; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--primary-color); transition: background 0.3s; }
         .faq-question:hover { background: #eee; }
-        .faq-answer {
-            padding: 0 25px; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out; background: #fff;
-            color: var(--text-light); border-top: 1px solid #eee;
-        }
+        .faq-answer { padding: 0 25px; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out; background: #fff; color: var(--text-light); border-top: 1px solid #eee; }
         .faq-answer p { padding: 15px 0; margin: 0; }
+        .faq-question span { font-size: 20px; transition: transform 0.3s; }
+        .faq-question.active span { transform: rotate(45deg); }
         
-        .faq-question span {
-            font-size: 20px; transition: transform 0.3s;
-        }
-        .faq-question.active span {
-            transform: rotate(45deg);
-        }
-        
-        /* --- Installment Banner Styles (RESTORED TO PREVIOUS FLAT DESIGN) --- */
-        .installment-banner {
-            text-align: center;
-            padding: 40px 20px;
-            margin: 40px 0;
-            background: white; /* Flat white background */
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            border: 2px solid var(--primary-color); /* Primary color border */
-        }
-        .installment-banner h2 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            font-weight: 800;
-            color: var(--primary-color);
-        }
-        .installment-banner p {
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-            color: var(--text-dark);
-        }
-        .installment-banner .btn-outline-dark {
-            display: inline-block;
-            padding: 12px 30px;
-            font-size: 1rem;
-            color: var(--primary-color);
-            background-color: transparent;
-            border: 2px solid var(--primary-color);
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 700;
-            transition: 0.3s;
-        }
-        .installment-banner .btn-outline-dark:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
+        /* --- Installment Banner --- */
+        .installment-banner { text-align: center; padding: 40px 20px; margin: 40px 0; background: white; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 2px solid var(--primary-color); }
+        .installment-banner h2 { font-size: 2rem; margin-bottom: 10px; font-weight: 800; color: var(--primary-color); }
+        .installment-banner p { font-size: 1.1rem; margin-bottom: 25px; color: var(--text-dark); }
+        .installment-banner .btn-outline-dark { display: inline-block; padding: 12px 30px; font-size: 1rem; color: var(--primary-color); background-color: transparent; border: 2px solid var(--primary-color); text-decoration: none; border-radius: 50px; font-weight: 700; transition: 0.3s; }
+        .installment-banner .btn-outline-dark:hover { background-color: var(--primary-color); color: white; }
 
-        /* --- Footer (Existing Styles) --- */
+        /* --- Footer --- */
         .footer { background: #1a1a2e; color: #bdc3c7; padding: 70px 0 30px; }
         .footer-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; }
         .footer-col h4 { font-size: 1.3rem; color: white; margin-bottom: 25px; position: relative; padding-bottom: 10px; }
@@ -319,55 +276,32 @@
         .footer-logo-box img { width: 100px; background: white; padding: 8px; border-radius: 8px; margin-bottom: 20px; }
         .footer-bottom { text-align: center; margin-top: 50px; padding-top: 25px; border-top: 1px solid #2c3e50; font-size: 14px; }
 
-        /* --- WhatsApp Float (Updated Styles - Left Position & Flashing) --- */
+        /* --- WhatsApp Float --- */
         .whatsapp-float { 
-            position: fixed; 
-            width: 60px; 
-            height: 60px; 
-            bottom: 30px; 
-            left: 30px; /* Kept on Left */
-            background-color: #25d366; 
-            color: #FFF; 
-            border-radius: 50px; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.2); 
-            z-index: 100; 
-            
-            /* Kept animation for flashing effect */
+            position: fixed; width: 60px; height: 60px; bottom: 30px; left: 30px; 
+            background-color: #25d366; color: #FFF; border-radius: 50px; display: flex; justify-content: center; align-items: center; 
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 100; 
             animation: pulse 2s infinite, flash-visibility 5s infinite; 
         }
 
-        /* Existing pulse animation */
         @keyframes pulse { 
             0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 
             70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); } 
             100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } 
         } 
         
-        /* Flashing animation */
         @keyframes flash-visibility {
-            /* Visible for the first 2 seconds (40% of 5s) */
             0% { opacity: 1; visibility: visible; } 
             40% { opacity: 1; visibility: visible; } 
-            
-            /* Invisible for the next 3 seconds */
             40.01% { opacity: 0; visibility: hidden; } 
             100% { opacity: 0; visibility: hidden; }
         }
 
-
-        /* Responsive (Existing Styles) */
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .menu-icon { display: block; }
             .hero-title { font-size: 1.8rem; }
-            /* Adjusted for small screens */
-            .whatsapp-float { 
-                left: 15px; /* Smaller margin on mobile */
-                bottom: 15px; 
-            }
+            .whatsapp-float { left: 15px; bottom: 15px; }
         }
     </style>
 </head>
@@ -428,21 +362,60 @@
     <main class="container">
         <section class="section" style="padding-bottom: 20px;">
             <h1 class="hero-title">ACS Future School <br> <span style="color: var(--accent-color);">একাডেমিক প্রোগ্রাম ২০২৬</span></h1>
-            <p class="hero-sub">দেশের সেরা শিক্ষকদের সাথে গড়ো তোমার উজ্জ্বল ভবিষ্যৎ।</p>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/vv2zHp82oFw" title="ACS Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="hero-sub">দেশের সেরা শিক্ষকদের সাথে গড়ো তোমার উজ্জ্বল ভবিষ্যৎ।</p>
+            
+            <!-- --- UPDATED HERO SECTION (Video Replaced with Explore Cards) --- -->
+            <div class="hero-explore-grid">
+                <div class="hero-explore-card" style="border-bottom: 4px solid var(--primary-color);">
+                    <i class="fas fa-graduation-cap" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 5px;">একাডেমিক ক্লাস</h3>
+                    <p style="color: var(--text-light); font-size: 0.95rem;">৬ষ্ঠ থেকে দশম শ্রেণির সেরা প্রস্তুতি।</p>
+                </div>
+                <div class="hero-explore-card" style="border-bottom: 4px solid var(--accent-color);">
+                    <i class="fas fa-robot" style="color: var(--accent-color);"></i>
+                    <h3 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 5px;">কিউরিওসিটি AI</h3>
+                    <p style="color: var(--text-light); font-size: 0.95rem;">২৪/৭ পার্সোনাল ডাউট সলভিং সাপোর্ট।</p>
+                </div>
+                <div class="hero-explore-card" style="border-bottom: 4px solid var(--secondary-color);">
+                    <i class="fas fa-chart-line" style="color: var(--secondary-color);"></i>
+                    <h3 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 5px;">মডেল টেস্ট</h3>
+                    <p style="color: var(--text-light); font-size: 0.95rem;">সাপ্তাহিক এক্সাম ও লাইভ লিডারবোর্ড।</p>
+                </div>
             </div>
+            <!-- --- END UPDATED HERO SECTION --- -->
+
             <div class="hero-action-btn">
                 <a href="#course-section">⬇️ আমাদের কোর্সগুলো দেখুন ও ভর্তি হোন ⬇️</a>
             </div>
         </section>
 
+        <!-- --- POPULAR COURSE SECTION --- -->
+        <section class="popular-course-section">
+            <h2>🔥 আমাদের সর্বাধিক জনপ্রিয় কোর্সসমূহ 🔥</h2>
+            <p>শিক্ষার্থীদের পছন্দের শীর্ষে থাকা কোর্সগুলোতে প্রি-বুক ডিসকাউন্ট চলছে! আজই যুক্ত হয়ে যাও।</p>
+            
+            <div class="popular-course-grid">
+                <a href="acs-ssc-27-frb.html" class="popular-course-card">
+                    <h3>SSC 27 FRB</h3>
+                    <p style="color: var(--text-dark); margin-bottom: 0;">এসএসসি ২৭ ব্যাচের ফাইনাল রিভিশন। প্রিটেস্টের পর সেরা প্রস্তুতি!</p>
+                    <span>বিস্তারিত দেখুন 🚀</span>
+                </a>
+                
+                <a href="#" class="popular-course-card" style="border-left-color: var(--accent-color); background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);">
+                    <h3 style="color: var(--accent-color);">HSC 28 Batch</h3>
+                    <p style="color: var(--text-dark); margin-bottom: 0;">এইচএসসি ২৮ ব্যাচের পূর্ণাঙ্গ একাডেমিক প্রোগ্রাম।</p>
+                    <span style="background: var(--accent-color);">বিস্তারিত দেখুন 🚀</span>
+                </a>
+            </div>
+        </section>
+        <!-- --- END POPULAR COURSE SECTION --- -->
+
         <section class="package-description-section">
             <h3>আমাদের কোর্স প্যাকেজসমূহ (২০২৬ শিক্ষাবর্ষ)</h3>
             <div class="package-grid">
                 <div class="package-card">
-                    <h4>১. 1st Half (জানুয়ারি – জুন)</h4>
-                    <p>বছরের প্রথম ৬ মাসের পূর্ণাঙ্গ প্রস্তুতি। এই সময়ের মধ্যে সিলেবাসের যতটুকু অংশ শেষ করা হবে, তার সব ক্লাস, লেকচার ও এক্সাম পাবে।</p>
+                    <h4>১. 1st Half (জানুয়ারি – জুন)</h4>
+                    <p>বছরের প্রথম ৬ মাসের পূর্ণাঙ্গ প্রস্তুতি। এই সময়ের মধ্যে সিলেবাসের যতটুকু অংশ শেষ করা হবে, তার সব ক্লাস, লেকচার ও এক্সাম পাবে।</p>
                 </div>
                 <div class="package-card" style="border-top: 3px solid var(--accent-color);">
                     <h4>২. 2nd Half (জুলাই – ডিসেম্বর + FRB)</h4>
@@ -450,108 +423,106 @@
                 </div>
                 <div class="package-card" style="border-top: 3px solid var(--primary-color);">
                     <h4>৩. Full Year (পুরো বছর + FRB)</h4>
-                    <p>সম্পূর্ণ শিক্ষাবর্ষের (জানুয়ারি থেকে ডিসেম্বর) জন্য। বছরের শুরু থেকে শেষ পর্যন্ত সকল ক্লাস, পরীক্ষা এবং <strong>FRB (Final Revision Batch)</strong> সহ সকল সুবিধা পাওয়া যাবে।</p>
+                    <p>সম্পূর্ণ শিক্ষাবর্ষের (জানুয়ারি থেকে ডিসেম্বর) জন্য। বছরের শুরু থেকে শেষ পর্যন্ত সকল ক্লাস, পরীক্ষা এবং <strong>FRB (Final Revision Batch)</strong> সহ সকল সুবিধা পাওয়া যাবে।</p>
                 </div>
             </div>
         </section>
 
+        <!-- --- UPDATED DISCOUNT SECTION --- -->
         <section class="discount-steps-container">
-            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 10px;">🏆 বছরের সেরা ডিসকাউন্ট অফার চলছে! 🏆</h2>
-            <p style="text-align: center; color: var(--text-dark); font-size: 1.1rem; font-weight: 600;">সময়সীমা: ৩১ ডিসেম্বর, ২০২৫</p>
+            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 10px;">🎁 স্পেশাল Agent Discount অফার! 🎁</h2>
+            <p style="text-align: center; color: var(--text-dark); font-size: 1.1rem; font-weight: 600;">আমাদের লিংকের মাধ্যমে ভর্তি হলেই পাচ্ছেন নিশ্চিত ছাড়!</p>
 
             <div class="discount-highlight">
-                <p>🔥 ACS Future School এর "Early Bird Discount" (সবার জন্য):</p>
+                <p>🔥 ACS Future School "Agent Discount" (সবার জন্য):</p>
                 <ul>
-                    <li>ফুল ইয়ার প্যাকেজে: <span>৳ ১৫০০</span> ডিসকাউন্ট</li>
-                    <li>হাফ ইয়ার/আর্টস/কমার্স বান্ডেল প্যাকেজে: <span>৳ ৭৫০</span> ডিসকাউন্ট</li>
+                    <li>ফুল ইয়ার প্যাকেজে: <span>৳ ১০০০ - ১৫০০</span> ডিসকাউন্ট</li>
+                    <li>হাফ ইয়ার/বান্ডেল প্যাকেজে: <span>৳ ৫০০ - ৭৫০</span> ডিসকাউন্ট</li>
                 </ul>
             </div>
-             <div class="discount-highlight" style="background: #e9ecef; border: 1px solid #ced4da;">
-                <p>⭐ AFS Ex Students Discount (বিশেষ সুযোগ):</p>
-                <ul>
-                    <li>পূর্ণাঙ্গ বর্ষে: <span>৳ ২,০০০</span> ডিসকাউন্ট</li>
-                    <li>অর্ধ-বর্ষের কোর্সে: <span>৳ ১,০০০</span> ডিসকাউন্ট</li>
-                </ul>
-                <p style="font-size: 0.9rem; margin-top: 5px;">* যারা শিক্ষাবর্ষ ২০২৫-এর একাডেমিক কিংবা ফাইনাল রিভিশন প্রোগ্রামে ভর্তি ছিল, শুধু তাদের জন্য প্রযোজ্য।</p>
+            
+            <div class="discount-highlight" style="background: #ffebee; border: 1px solid #ffcdd2;">
+                <p style="color: #c62828; font-size: 1.2rem; margin-bottom: 5px;">❌ AFS Ex-Students Discount নোটিশ</p>
+                <p style="font-size: 0.95rem; color: #b71c1c; font-weight: 600;">দুঃখিত! Ex-Student ডিসকাউন্টের মেয়াদ শেষ হয়ে গিয়েছে। এটি বর্তমানে আর প্রযোজ্য নয়। তবে আপনি আমাদের লিংকের মাধ্যমে Agent Discount উপভোগ করতে পারবেন।</p>
             </div>
 
-
-            <h3 style="text-align: center; color: var(--primary-color); margin-top: 30px; margin-bottom: 20px;">ভর্তির প্রক্রিয়া (ডিসকাউন্ট পেতে)</h3>
+            <h3 style="text-align: center; color: var(--primary-color); margin-top: 30px; margin-bottom: 20px;">ভর্তির প্রক্রিয়া (ডিসকাউন্ট পেতে)</h3>
             <div class="steps-grid">
                 <div class="step-card">
                     <div class="step-number">১</div>
                     <h4>কোর্স নির্বাচন করুন</h4>
-                    <p>আপনার শ্রেণি এবং প্যাকেজ (Full Year/Half Year) নিচের তালিকা থেকে পছন্দ করুন।</p>
+                    <p>আপনার শ্রেণি এবং প্যাকেজ (Full Year/Half Year) নিচের তালিকা থেকে পছন্দ করুন.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">২</div>
                     <h4>লিংকে ক্লিক করুন</h4>
-                    <p>"ভর্তি হও" বাটনে ক্লিক করলে আপনাকে সরাসরি পেমেন্ট পেজে নেওয়া হবে।</p>
+                    <p>"ভর্তি হও" বাটনে ক্লিক করলে আপনাকে সরাসরি পেমেন্ট পেজে নেওয়া হবে।</p>
                 </div>
                 <div class="step-card" style="background: #e8f5e9;">
                     <div class="step-number" style="background: var(--secondary-color);">৩</div>
                     <h4>ডিসকাউন্ট নিশ্চিত!</h4>
-                    <p>এই লিংকগুলো থেকে গেলে **Early Bird Discount** স্বয়ংক্রিয়ভাবে যুক্ত হয়ে যাবে।</p>
+                    <p>এই লিংকগুলো থেকে গেলে **Discount** স্বয়ংক্রিয়ভাবে যুক্ত হয়ে যাবে।</p>
                 </div>
             </div>
         </section>
+        <!-- --- END UPDATED DISCOUNT SECTION --- -->
 
         <section class="section" id="course-section"> 
-            <h2 class="course-section-heading">আমাদের প্রিমিয়াম কোর্সসমূহ (Full Year)</h2>
-            <p style="text-align: center; color: var(--text-light); margin-bottom: 40px;">* Early Bird ডিসকাউন্ট ফুল ইয়ারে ১৫০০ টাকা প্রযোজ্য। হাফ ইয়ার/অন্যান্য বান্ডেলের জন্য ৭৫০ টাকা।</p>
+            <h2 class="course-section-heading">আমাদের প্রিমিয়াম কোর্সসমূহ (Full Year)</h2>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 40px;">* Early Bird ডিসকাউন্ট শুধুমাত্র দশম শ্রেণিতে প্রযোজ্য। অন্যান্য ক্লাসে Agent ডিসকাউন্ট যুক্ত হবে।</p>
             
             <div class="course-grid">
                 <div class="course-card">
                     <h3>💡 ষষ্ঠ শ্রেণি (Full Year)</h3>
                     <p>১০০ তে ১০০ প্রস্তুতি নিশ্চিত এবং সাথে FRB পাচ্ছেন একদম ফ্রীতে।</p>
-                    <a href="https://cutt.ly/irwcPGej" class="btn" style="margin-top: 15px;">ভর্তি হও (Early Bird)</a>
-                    <span class="discount-note">🔥 ১৫০০ টাকা ডিসকাউন্ট যুক্ত হবে</span>
+                    <a href="https://afs.bd/yyFHRX" class="btn" style="margin-top: 15px;">ভর্তি হও</a>
+                    <span class="discount-note">🔥 Agent Discount যুক্ত হবে</span>
                 </div>
                 <div class="course-card" style="border-top-color: var(--secondary-color);">
                     <h3>🚀 সপ্তম শ্রেণি (Full Year)</h3>
                     <p>গণিত ও বিজ্ঞানের মজবুত ভিত্তি এবং FRB সহ।</p>
-                    <a href="https://cutt.ly/arwcOWQs" class="btn" style="margin-top: 15px; background-color: var(--secondary-color);">ভর্তি হও (Early Bird)</a>
-                    <span class="discount-note">🔥 ১৫০০ টাকা ডিসকাউন্ট যুক্ত হবে</span>
+                    <a href="https://afs.bd/a5Sgkh" class="btn" style="margin-top: 15px; background-color: var(--secondary-color);">ভর্তি হও</a>
+                    <span class="discount-note">🔥 Agent Discount যুক্ত হবে</span>
                 </div>
                 <div class="course-card">
                     <h3>🎯 অষ্টম শ্রেণি (Full Year)</h3>
                     <p>জেএসসি ও স্কলারশিপ গাইডলাইন এবং FRB সহ।</p>
-                    <a href="https://cutt.ly/ErwcI2Wk" class="btn" style="margin-top: 15px;">ভর্তি হও (Early Bird)</a>
-                    <span class="discount-note">🔥 ১৫০০ টাকা ডিসকাউন্ট যুক্ত হবে</span>
+                    <a href="https://afs.bd/8kkSG5" class="btn" style="margin-top: 15px;">ভর্তি হও</a>
+                    <span class="discount-note">🔥 Agent Discount যুক্ত হবে</span>
                 </div>
                 <div class="course-card" style="border-top-color: var(--accent-color);">
                     <h3>⚛️ নবম শ্রেণি (Full Year)</h3>
                     <p>গ্রুপ সাবজেক্ট সহ সকল জেনারেল সাবজেক্ট এর সেরা প্রস্তুতি এবং FRB সহ।</p>
-                    <a href="https://cutt.ly/krwcIsyb" class="btn" style="margin-top: 15px; background-color: var(--accent-color);">ভর্তি হও (Early Bird)</a>
-                    <span class="discount-note">🔥 ১৫০০ টাকা ডিসকাউন্ট যুক্ত হবে</span>
+                    <a href="https://afs.bd/xiu1yG" class="btn" style="margin-top: 15px; background-color: var(--accent-color);">ভর্তি হও</a>
+                    <span class="discount-note">🔥 Agent Discount যুক্ত হবে</span>
                 </div>
                 <div class="course-card">
-                    <h3>🎓 দশম শ্রেণি (Full Year)</h3>
-                    <p>এসএসসি ২০২৬ এর পূর্ণাঙ্গ প্রস্তুতি ও FRB সহ।</p>
-                    <a href="https://cutt.ly/BrwcRUu5" class="btn" style="margin-top: 15px;">ভর্তি হও (Early Bird)</a>
-                    <span class="discount-note">🔥 ১৫০০ টাকা ডিসকাউন্ট যুক্ত হবে</span>
+                    <h3>🎓 দশম শ্রেণি / SSC 27 (Full Year)</h3>
+                    <p>এসএসসি ২০২৭ এর পূর্ণাঙ্গ প্রস্তুতি ও FRB সহ।</p>
+                    <a href="acs-ssc-27-frb.html" class="btn" style="margin-top: 15px;">ভর্তি হও (Early Bird)</a>
+                    <span class="discount-note">🔥 Early Bird Discount যুক্ত হবে</span>
                 </div>
             </div>
             
             <div style="text-align: center; margin-top: 50px;">
-                <a href="courses.html" class="btn-outline-dark" style="border: 2px solid var(--primary-color); color: var(--primary-color); background: white; padding: 10px 25px;">অন্যান্য প্যাকেজগুলো দেখুন</a>
+                <a href="courses.html" class="btn-outline-dark" style="border: 2px solid var(--primary-color); color: var(--primary-color); background: white; padding: 10px 25px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: 0.3s;">অন্যান্য প্যাকেজগুলো দেখুন</a>
             </div>
         </section>
 
-        <section class="bilingual-section">
+        <section class="bilingual-section" style="padding-top: 40px;">
             <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 20px;">কেন বেছে নেবেন ACS Future School?</h2>
             
-            <div class="language-toggle">
-                <button class="toggle-btn active" onclick="toggleLanguage('bn')">বাংলা</button>
-                <button class="toggle-btn" onclick="toggleLanguage('en')">English</button>
+            <div class="language-toggle" style="text-align: center; margin-bottom: 20px;">
+                <button class="toggle-btn active" onclick="toggleLanguage('bn')" style="padding: 5px 15px; border: 1px solid var(--primary-color); background: var(--primary-color); color: white; cursor: pointer; border-radius: 5px;">বাংলা</button>
+                <button class="toggle-btn" onclick="toggleLanguage('en')" style="padding: 5px 15px; border: 1px solid var(--primary-color); background: white; color: var(--primary-color); cursor: pointer; border-radius: 5px;">English</button>
             </div>
 
             <div id="bn-content" class="content-text">
                 <p><strong>ACS Future School</strong> শিক্ষার্থীদের জন্য এক নতুন দিগন্ত উন্মোচন করেছে। আমরা বিশ্বাস করি সঠিক দিকনির্দেশনা এবং মানসম্মত শিক্ষা প্রতিটি শিক্ষার্থীর অধিকার।</p>
-                <p>আমাদের প্ল্যাটফর্মে ক্লাস নেন বুয়েট, ঢাকা বিশ্ববিদ্যালয় এবং স্বনামধন্য মেডিকেল কলেজের অভিজ্ঞ ভাইয়া-আপুরা। প্রথাগত মুখস্থবিদ্যার বাইরে গিয়ে আমরা জোর দিই কনসেপ্ট ক্লিয়ার করার ওপর। আমাদের স্মার্ট ক্লাসরুম, লাইভ ইন্টারঅ্যাকশন এবং সার্বক্ষণিক প্রবলেম সলভিং সাপোর্ট শিক্ষার্থীদের আত্মবিশ্বাসী করে তোলে।</p>
+                <p>আমাদের প্ল্যাটফর্মে ক্লাস নেন বুয়েট, ঢাকা বিশ্ববিদ্যালয় এবং স্বনামধন্য মেডিকেল কলেজের অভিজ্ঞ ভাইয়া-আপুরা। প্রথাগত মুখস্থবিদ্যার বাইরে গিয়ে আমরা জোর দিই কনসেপ্ট ক্লিয়ার করার ওপর। আমাদের স্মার্ট ক্লাসরুম, লাইভ ইন্টারঅ্যাকশন এবং সার্বক্ষণিক প্রবলেম সলভিং সাপোর্ট শিক্ষার্থীদের আত্মবিশ্বাসী করে তোলে।</p>
                 <ul style="margin-left: 20px; margin-top: 15px;">
                     <li>✅ অভিজ্ঞ ও সেরা শিক্ষক প্যানেল।</li>
-                    <li>✅ নতুন কারিকুলাম অনুযায়ী আপডেটেড কন্টেন্ট।</li>
+                    <li>✅ নতুন কারিকুলাম অনুযায়ী আপডেটেড কন্টেন্ট।</li>
                     <li>✅ নিয়মিত মডেল টেস্ট ও পারফরম্যান্স অ্যানালাইসিস।</li>
                 </ul>
             </div>
@@ -568,14 +539,14 @@
         </section>
 
         <section class="faq-section">
-            <h2 class="faq-heading">💡 প্রায়শই জিজ্ঞাসিত প্রশ্নাবলী (FAQ)</h2>
+            <h2 class="faq-heading">💡 প্রায়শই জিজ্ঞাসিত প্রশ্নাবলী (FAQ)</h2>
             <div class="faq-list">
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFAQ(this)">
-                        কোর্সটিতে কাদের ক্লাস নেওয়া হবে? <span>+</span>
+                        কোর্সটিতে কাদের ক্লাস নেওয়া হবে? <span>+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>আমাদের ক্লাসগুলি সাধারণত বুয়েট, ঢাকা বিশ্ববিদ্যালয় এবং স্বনামধন্য মেডিকেল কলেজের অভিজ্ঞ শিক্ষক দ্বারা নেওয়া হয়, যারা কনসেপ্ট ক্লিয়ারেন্সে বিশেষভাবে জোর দেন।</p>
+                        <p>আমাদের ক্লাসগুলি সাধারণত বুয়েট, ঢাকা বিশ্ববিদ্যালয় এবং স্বনামধন্য মেডিকেল কলেজের অভিজ্ঞ শিক্ষক দ্বারা নেওয়া হয়, যারা কনসেপ্ট ক্লিয়ারেন্সে বিশেষভাবে জোর দেন।</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -591,7 +562,7 @@
                         ডিসকাউন্ট কীভাবে পাব? <span>+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>আপনি যখন আমাদের দেওয়া "ভর্তি হও" লিংকে ক্লিক করবেন, তখন স্বয়ংক্রিয়ভাবে **Early Bird Discount** যুক্ত হয়ে যাবে। এছাড়া Ex-Student ডিসকাউন্টের জন্য আমাদের হেল্পলাইনে যোগাযোগ করতে পারেন।</p>
+                        <p>আপনি যখন আমাদের দেওয়া "ভর্তি হও" লিংকে ক্লিক করবেন, তখন স্বয়ংক্রিয়ভাবে **Agent Discount** যুক্ত হয়ে যাবে।</p>
                     </div>
                 </div>
                  <div class="faq-item">
@@ -607,9 +578,9 @@
 
 
         <section class="installment-banner">
-            <h2>টাকার চিন্তায় পড়ালেখা থামবে না!</h2>
+            <h2>টাকার চিন্তায় পড়ালেখা থামবে না!</h2>
             <p>ACS Future School এ এখন পাচ্ছেন সহজ কিস্তিতে ভর্তির সুবর্ণ সুযোগ। একবারে পুরো টাকা পরিশোধের চাপ নেই।</p>
-            <a href="quiz.html" class="btn-outline-dark">কিস্তির নিয়মাবলী দেখুন</a>
+            <a href="quiz.html" class="btn-outline-dark">কিস্তির নিয়মাবলী দেখুন</a>
         </section>
 
     </main>
@@ -620,7 +591,7 @@
                 <div class="footer-logo-box">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/ACS_Future_School_logo_photo.webp" alt="ACS Logo">
                 </div>
-                <p style="font-size: 14px;">আমরা গড়ছি আগামীর বাংলাদেশ। আধুনিক শিক্ষা ও প্রযুক্তির সমন্বয়ে আপনার সন্তানের উজ্জ্বল ভবিষ্যৎ নিশ্চিত করাই আমাদের লক্ষ্য।</p>
+                <p style="font-size: 14px;">আমরা গড়ছি আগামীর বাংলাদেশ। আধুনিক শিক্ষা ও প্রযুক্তির সমন্বয়ে আপনার সন্তানের উজ্জ্বল ভবিষ্যৎ নিশ্চিত করাই আমাদের লক্ষ্য।</p>
             </div>
             <div class="footer-col">
                 <h4>একাডেমিক প্রোগ্রাম</h4>
@@ -650,7 +621,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 ACS Future School. All Rights Reserved. | Design Updated for Better Experience.</p>
+            <p>&copy; 2026 ACS Future School. All Rights Reserved. | Design Updated for Better Experience.</p>
         </div>
     </footer>
 
@@ -692,24 +663,32 @@
                 enContent.classList.add('hidden');
                 bnBtn.classList.add('active');
                 enBtn.classList.remove('active');
+                
+                bnBtn.style.background = 'var(--primary-color)';
+                bnBtn.style.color = 'white';
+                enBtn.style.background = 'white';
+                enBtn.style.color = 'var(--primary-color)';
             } else {
                 enContent.classList.remove('hidden');
                 bnContent.classList.add('hidden');
                 enBtn.classList.add('active');
                 bnBtn.classList.remove('active');
+                
+                enBtn.style.background = 'var(--primary-color)';
+                enBtn.style.color = 'white';
+                bnBtn.style.background = 'white';
+                bnBtn.style.color = 'var(--primary-color)';
             }
         }
 
-        // FAQ Toggle Logic (FIXED)
+        // FAQ Toggle Logic
         function toggleFAQ(element) {
             element.classList.toggle('active');
             const answer = element.nextElementSibling;
             
-            // Check if the answer section is currently open
             if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
-                answer.style.maxHeight = null; // Close it
+                answer.style.maxHeight = null; 
             } else {
-                // Open it by setting max-height equal to the scroll height of the content
                 answer.style.maxHeight = answer.scrollHeight + "px";
             } 
         }
