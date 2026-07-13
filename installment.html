@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>কিস্তিতে ভর্তি (Installment) | ACS Future School</title>
+    
+    <meta name="title" content="কিস্তিতে ভর্তি - ACS Future School">
+    <meta name="description" content="টাকার চিন্তায় পড়ালেখা থামবে না! ACS Future School-এ এখন পাচ্ছেন ২ ধাপে (৫০%-৫০%) সহজ কিস্তিতে ভর্তির সুবর্ণ সুযোগ। বিস্তারিত জানতে ভিজিট করুন।">
+    <meta name="keywords" content="ACS Future School Installment, কিস্তিতে ভর্তি, ACS course installment, 50% payment, ACS Future school admission">
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* --- Root Variables --- */
+        :root {
+            --primary-color: #4a148c;
+            --secondary-color: #28a745;
+            --accent-color: #ff9800;
+            --background-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            --text-dark: #2c3e50;
+            --text-light: #555;
+            --whatsapp-color: #25d366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        
+        body { 
+            font-family: 'Poppins', 'Hind Siliguri', sans-serif; 
+            background: var(--background-gradient); 
+            color: var(--text-dark); 
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container { max-width: 1150px; margin: 0 auto; padding: 0 20px; }
+        .section { padding: 50px 0; }
+
+        /* --- Navbar --- */
+        .navbar { 
+            background: rgba(255, 255, 255, 0.95); 
+            backdrop-filter: blur(10px); 
+            padding: 10px 0; 
+            position: sticky; top: 0; z-index: 1000; 
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05); 
+        }
+        .navbar-container { 
+            width: 100%; max-width: 1150px; margin: 0 auto; padding: 0 20px; 
+            display: flex; justify-content: space-between; align-items: center; 
+        }
+        .nav-logo img { width: 70px; height: auto; }
+        .nav-links { display: flex; gap: 10px; align-items: center; }
+        .nav-links a { 
+            color: var(--text-dark); text-decoration: none; padding: 8px 12px; 
+            font-size: 15px; font-weight: 600; transition: all 0.3s ease; border-radius: 5px; 
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary-color); background: #f0e6f7; }
+
+        /* Dropdown */
+        .dropdown { position: relative; }
+        .dropdown-content { 
+            display: none; position: absolute; top: 100%; left: 0; 
+            background-color: white; min-width: 200px; 
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1); border-radius: 8px; 
+            padding: 10px 0; z-index: 1001; 
+        }
+        .dropdown:hover .dropdown-content { display: block; }
+        .dropdown-content a { color: var(--text-dark); padding: 10px 20px; display: block; width: 100%; text-align: left; }
+        .dropdown-content a:hover { background-color: #f8f9fa; color: var(--primary-color); }
+
+        /* Mobile Menu */
+        .menu-icon { display: none; cursor: pointer; }
+        .menu-icon div { width: 25px; height: 3px; background-color: var(--primary-color); margin: 5px 0; transition: 0.4s; }
+        .side-menu { 
+            position: fixed; top: 0; left: -300px; width: 300px; height: 100%; 
+            background-color: #ffffff; padding-top: 20px; transition: left 0.4s ease-in-out; 
+            z-index: 1002; box-shadow: 5px 0 15px rgba(0,0,0,0.1); overflow-y: auto; 
+        }
+        .side-menu.active { left: 0; }
+        .menu-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1001; display: none; }
+        .menu-overlay.active { display: block; }
+        .side-menu-nav a { display: block; padding: 10px 20px; color: var(--text-dark); text-decoration: none; font-weight: 600; }
+        .side-menu-nav .accordion-content a { padding-left: 40px; font-weight: 400; }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out; background: #f9f9fa; }
+        .accordion-toggle { display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+        .accordion-toggle::after { content: '▼'; font-size: 14px; transition: transform 0.3s; color: var(--primary-color); }
+        .accordion-toggle.active::after { transform: rotate(180deg); }
+
+        /* --- Installment Hero --- */
+        .installment-hero {
+            background: linear-gradient(135deg, #1a237e 0%, #4a148c 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            border-radius: 20px;
+            margin-top: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .installment-hero h1 { font-size: 2.8rem; font-weight: 800; color: #ffeb3b; margin-bottom: 15px; line-height: 1.3; }
+        .installment-hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.9; }
+
+        /* --- Installment Steps UI --- */
+        .installment-details {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            margin-top: -30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 10;
+        }
+        .installment-details h2 {
+            text-align: center; color: var(--primary-color); font-size: 2rem; margin-bottom: 40px; font-weight: 800;
+        }
+
+        .steps-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .step-box {
+            background: #f8f9fa;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            position: relative;
+            transition: 0.3s;
+        }
+        .step-box:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 25px rgba(74, 20, 140, 0.1);
+        }
+        .step-icon {
+            width: 60px; height: 60px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            font-size: 24px; font-weight: bold;
+            margin: -60px auto 20px auto;
+            box-shadow: 0 5px 15px rgba(74, 20, 140, 0.3);
+        }
+        .step-box.second .step-icon { background: var(--accent-color); }
+        
+        .step-box h3 { color: var(--text-dark); font-size: 1.5rem; margin-bottom: 10px; }
+        .step-box .percentage { font-size: 3rem; font-weight: 900; color: var(--primary-color); margin: 10px 0; line-height: 1; }
+        .step-box.second .percentage { color: var(--accent-color); }
+        .step-box p { color: var(--text-light); font-size: 1.1rem; font-weight: 600; }
+
+        /* --- Rules / Conditions --- */
+        .rules-box {
+            background: #fff3e0;
+            border-left: 5px solid var(--accent-color);
+            padding: 25px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+        .rules-box h4 { color: #e65100; font-size: 1.3rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .rules-box ul { list-style: none; padding: 0; }
+        .rules-box ul li { margin-bottom: 10px; font-size: 1.05rem; display: flex; align-items: flex-start; gap: 10px; }
+        .rules-box ul li i { color: var(--accent-color); margin-top: 5px; }
+
+        /* --- Large WhatsApp CTA --- */
+        .cta-section {
+            text-align: center;
+            margin-top: 50px;
+            padding: 40px 20px;
+            background: #e8f5e9;
+            border-radius: 15px;
+            border: 2px dashed var(--whatsapp-color);
+        }
+        .cta-section h2 { color: #1b5e20; margin-bottom: 15px; font-size: 1.8rem; }
+        .cta-section p { color: #2e7d32; font-size: 1.1rem; margin-bottom: 25px; }
+        
+        .btn-whatsapp-large {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background-color: var(--whatsapp-color);
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+        }
+        .btn-whatsapp-large:hover {
+            background-color: #1da851;
+            transform: translateY(-3px);
+            color: white;
+        }
+        .btn-whatsapp-large i { font-size: 1.8rem; }
+
+        /* --- Footer --- */
+        .footer { background: #1a1a2e; color: #bdc3c7; padding: 70px 0 30px; margin-top: 50px; }
+        .footer-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; max-width: 1150px; margin: 0 auto; padding: 0 20px; }
+        .footer-col h4 { font-size: 1.3rem; color: white; margin-bottom: 25px; position: relative; padding-bottom: 10px; }
+        .footer-col h4::after { content: ''; position: absolute; left: 0; bottom: 0; width: 50px; height: 3px; background: var(--accent-color); }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 12px; }
+        .footer-col a { color: #bdc3c7; text-decoration: none; transition: 0.3s; display: block; }
+        .footer-col a:hover { color: var(--accent-color); padding-left: 5px; }
+        .footer-logo-box img { width: 100px; background: white; padding: 8px; border-radius: 8px; margin-bottom: 20px; }
+        .footer-bottom { text-align: center; margin-top: 50px; padding-top: 25px; border-top: 1px solid #2c3e50; font-size: 14px; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .menu-icon { display: block; }
+            .installment-hero h1 { font-size: 2.2rem; }
+            .installment-details { padding: 30px 20px; }
+            .step-box { max-width: 100%; margin-top: 30px; }
+            .btn-whatsapp-large { font-size: 1.1rem; padding: 12px 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="nav-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/ACS_Future_School_logo_photo.webp" alt="ACS Future School Logo">
+            </a> <b><p align="center" >Academic Program</p></b>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a> 
+                <div class="dropdown">
+                    <a href="courses.html">Academic Program</a> 
+                    <div class="dropdown-content">
+                        <a href="class6.html">Class 6</a>
+                        <a href="class7.html">Class 7</a>
+                        <a href="class8.html">Class 8</a>
+                        <a href="class9.html">Class 9</a>
+                        <a href="class10.html">Class 10</a>
+                    </div>
+                </div>
+                <a href="acs-ssc-27-frb.html">SSC 27 FRB</a>
+                <a href="quiz.html" class="active" style="color: var(--accent-color);">Installment (কিস্তি)</a>
+                <a href="Contact.html">Contact</a>
+            </nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div></div><div></div><div></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Side Menu (Mobile) -->
+    <div class="side-menu" id="sideMenu">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; border-bottom: 1px solid #eee;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/ACS_Future_School_logo_photo.webp" alt="Logo" width="70">
+            <span style="font-size: 24px; cursor: pointer;" onclick="closeMenu()">✖</span>
+        </div>
+        <nav class="side-menu-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <div class="accordion">
+                <a href="#" class="accordion-toggle">Academic Program</a>
+                <div class="accordion-content">
+                    <a href="class6.html">Class 6</a>
+                    <a href="class7.html">Class 7</a>
+                    <a href="class8.html">Class 8</a>
+                    <a href="class9.html">Class 9</a>
+                    <a href="class10.html">Class 10</a>
+                </div>
+            </div>
+            <a href="acs-ssc-27-frb.html">SSC 27 FRB</a>
+            <a href="quiz.html" style="color: var(--accent-color);">কিস্তিতে ভর্তি</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="installment-hero">
+            <h1>টাকার চিন্তায় পড়ালেখা থামবে না!</h1>
+            <p>ACS Future School-এ এখন পাচ্ছেন ২ ধাপে সহজ কিস্তিতে ভর্তির সুবর্ণ সুযোগ। একবারে পুরো টাকা পরিশোধের কোনো চাপ নেই।</p>
+        </section>
+
+        <!-- Installment Details -->
+        <section class="installment-details">
+            <h2>কিভাবে কিস্তি কাজ করে?</h2>
+            
+            <div class="steps-container">
+                <!-- 1st Installment -->
+                <div class="step-box">
+                    <div class="step-icon">১</div>
+                    <h3>প্রথম কিস্তি</h3>
+                    <div class="percentage">50%</div>
+                    <p>ভর্তির সময় প্রদান করতে হবে</p>
+                </div>
+
+                <!-- 2nd Installment -->
+                <div class="step-box second">
+                    <div class="step-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h3>দ্বিতীয় কিস্তি</h3>
+                    <div class="percentage">50%</div>
+                    <p>ভর্তির ঠিক ১ মাসের মধ্যে</p>
+                </div>
+            </div>
+
+            <!-- Rules / Conditions -->
+            <div class="rules-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> জরুরি নিয়মাবলী (Terms & Conditions)</h4>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> কিস্তির সুবিধাটি শুধুমাত্র ফুল ইয়ার (Full Year) বা নির্দিষ্ট মেগা প্যাকেজগুলোর জন্য প্রযোজ্য।</li>
+                    <li><i class="fas fa-check-circle"></i> প্রথম কিস্তি (৫০%) পরিশোধ করার সাথে সাথেই আপনি কোর্সের ফুল এক্সেস পেয়ে যাবেন।</li>
+                    <li><i class="fas fa-check-circle"></i> দ্বিতীয় কিস্তি (বাকি ৫০%) অবশ্যই প্রথম পেমেন্টের তারিখ থেকে <strong>১ মাসের (৩০ দিন) মধ্যে</strong> পরিশোধ করতে হবে।</li>
+                    <li><i class="fas fa-check-circle"></i> নির্ধারিত ১ মাসের মধ্যে দ্বিতীয় কিস্তি পরিশোধে ব্যর্থ হলে কোর্সের এক্সেস সাময়িকভাবে স্থগিত করা হতে পারে।</li>
+                </ul>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <h2>কিস্তিতে ভর্তি হতে আগ্রহী?</h2>
+                <p>কিস্তিতে ভর্তি হওয়ার পেমেন্ট লিংক এবং বিস্তারিত প্রসেস জানতে আমাদের এডমিশন টিমের সাথে সরাসরি WhatsApp-এ যোগাযোগ করুন।</p>
+                
+                <a href="https://wa.me/8801778682815?text=আমি%20কিস্তিতে%20ভর্তি%20হতে%20চাই।%20অনুগ্রহ%20করে%20বিস্তারিত%20জানান।" class="btn-whatsapp-large" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp এ মেসেজ দিন
+                </a>
+                <p style="margin-top: 15px; font-weight: bold; color: #555;">📞 হেল্পলাইন: 01778682815</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo-box">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/ACS_Future_School_logo_photo.webp" alt="ACS Logo">
+                </div>
+                <p style="font-size: 14px;">আমরা গড়ছি আগামীর বাংলাদেশ। আধুনিক শিক্ষা ও প্রযুক্তির সমন্বয়ে আপনার সন্তানের উজ্জ্বল ভবিষ্যৎ নিশ্চিত করাই আমাদের লক্ষ্য।</p>
+            </div>
+            <div class="footer-col">
+                <h4>একাডেমিক প্রোগ্রাম</h4>
+                <ul>
+                    <li><a href="class6.html">ষষ্ঠ থেকে অষ্টম শ্রেণি</a></li>
+                    <li><a href="class9.html">নবম শ্রেণির বিজ্ঞান</a></li>
+                    <li><a href="class10.html">SSC 2026 প্রস্তুতি</a></li>
+                    <li><a href="acs-ssc-27-frb.html">SSC 27 FRB</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>গুরুত্বপূর্ণ লিংকস</h4>
+                <ul>
+                    <li><a href="index.html">হোম পেইজ</a></li>
+                    <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                    <li><a href="faq.html">FAQ (প্রশ্নাবলী)</a></li> 
+                    <li><a href="quiz.html" style="color: var(--accent-color); font-weight: bold;">কিস্তিতে ভর্তি</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>সাপোর্ট ও যোগাযোগ</h4>
+                <ul>
+                    <li><a href="Policy.html">প্রাইভেসি পলিসি</a></li>
+                    <li><a href="https://wa.me/8801778682815">হেল্পলাইন (WhatsApp)</a></li>
+                    <li><a href="Contact.html">যোগাযোগ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ACS Future School. All Rights Reserved. | Designed for Better Experience.</p>
+        </div>
+    </footer>
+
+    <!-- Script for Mobile Menu -->
+    <script>
+        const sideMenu = document.getElementById("sideMenu");
+        const overlay = document.getElementById("menuOverlay");
+
+        function toggleMenu() { 
+            sideMenu.classList.add("active"); 
+            overlay.classList.add("active"); 
+        }
+        
+        function closeMenu() { 
+            sideMenu.classList.remove("active"); 
+            overlay.classList.remove("active"); 
+        }
+        
+        overlay.addEventListener('click', closeMenu);
+
+        // Mobile Accordion
+        document.querySelectorAll('.accordion-toggle').forEach(item => {
+            item.addEventListener('click', event => {
+                event.preventDefault();
+                const content = item.nextElementSibling;
+                item.classList.toggle('active');
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                } 
+            });
+        });
+    </script>
+
+</body>
+</html>
