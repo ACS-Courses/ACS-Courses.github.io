@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আমাদের সম্পর্কে (About Us) | ACS Future School Affiliate</title>
+    
+    <meta name="title" content="আমাদের সম্পর্কে | ACS Future School Course Discount">
+    <meta name="description" content="আমি ACS Future School-এর একজন অফিশিয়াল অ্যাফিলিয়েট পার্টনার। আমাদের লক্ষ্য শিক্ষার্থীদের সঠিক কোর্সের গাইডলাইন দেওয়া এবং স্পেশাল ডিসকাউন্টে ভর্তির সুযোগ করে দেওয়া।">
+    <meta name="keywords" content="ACS Future School, ACS Affiliate Partner, About Us, ACS course discount, ACS admission help">
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* --- Root Variables --- */
+        :root {
+            --primary-color: #4a148c;
+            --secondary-color: #28a745;
+            --accent-color: #ff9800;
+            --background-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            --text-dark: #2c3e50;
+            --text-light: #555;
+            --whatsapp-color: #25d366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        
+        body { 
+            font-family: 'Poppins', 'Hind Siliguri', sans-serif; 
+            background: var(--background-gradient); 
+            color: var(--text-dark); 
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container { max-width: 1150px; margin: 0 auto; padding: 0 20px; }
+
+        /* --- Navbar --- */
+        .navbar { 
+            background: rgba(255, 255, 255, 0.98); 
+            backdrop-filter: blur(10px); 
+            padding: 12px 0; 
+            position: sticky; top: 0; z-index: 1000; 
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08); 
+        }
+        .navbar-container { 
+            display: flex; justify-content: space-between; align-items: center; 
+        }
+        .nav-logo img { width: 70px; height: auto; }
+        .nav-links { display: flex; gap: 10px; align-items: center; }
+        .nav-links a { 
+            color: var(--text-dark); text-decoration: none; padding: 8px 15px; 
+            font-size: 15px; font-weight: 600; transition: all 0.3s ease; border-radius: 5px; 
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary-color); background: #f0e6f7; }
+
+        /* Dropdown */
+        .dropdown { position: relative; }
+        .dropdown-content { 
+            display: none; position: absolute; top: 100%; left: 0; 
+            background-color: white; min-width: 200px; 
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1); border-radius: 8px; 
+            padding: 10px 0; z-index: 1001; 
+        }
+        .dropdown:hover .dropdown-content { display: block; }
+        .dropdown-content a { color: var(--text-dark); padding: 10px 20px; display: block; width: 100%; text-align: left; }
+        .dropdown-content a:hover { background-color: #f8f9fa; color: var(--primary-color); }
+
+        /* Mobile Menu */
+        .menu-icon { display: none; cursor: pointer; }
+        .menu-icon div { width: 25px; height: 3px; background-color: var(--primary-color); margin: 5px 0; transition: 0.4s; }
+        .side-menu { 
+            position: fixed; top: 0; left: -300px; width: 300px; height: 100%; 
+            background-color: #ffffff; padding-top: 20px; transition: left 0.4s ease-in-out; 
+            z-index: 1002; box-shadow: 5px 0 15px rgba(0,0,0,0.1); overflow-y: auto; 
+        }
+        .side-menu.active { left: 0; }
+        .menu-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1001; display: none; }
+        .menu-overlay.active { display: block; }
+        .side-menu-nav a { display: block; padding: 12px 20px; color: var(--text-dark); text-decoration: none; font-weight: 600; border-bottom: 1px solid #f1f1f1; }
+        .side-menu-nav .accordion-content a { padding-left: 40px; font-weight: 400; border-bottom: none; }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out; background: #f9f9fa; }
+        .accordion-toggle { display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+        .accordion-toggle::after { content: '▼'; font-size: 14px; transition: transform 0.3s; color: var(--primary-color); }
+        .accordion-toggle.active::after { transform: rotate(180deg); }
+
+        /* --- About Hero Section --- */
+        .about-hero {
+            background: linear-gradient(135deg, #1a237e 0%, #4a148c 100%);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+            border-radius: 20px;
+            margin-top: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        .about-hero h1 { font-size: 3rem; font-weight: 800; color: #fff; margin-bottom: 15px; }
+        .about-hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; color: #e0e0e0; }
+        
+        /* --- About Content Section --- */
+        .about-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            margin-top: -30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 10;
+        }
+        .about-text {
+            flex: 1;
+        }
+        .about-text h2 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .about-text p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        .highlight-box {
+            background: #fff3e0;
+            border-left: 5px solid var(--accent-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        .highlight-box p {
+            margin: 0;
+            color: #e65100;
+            font-weight: 600;
+            font-size: 1.15rem;
+        }
+        
+        /* Optional Graphic/Illustration Side */
+        .about-image {
+            flex: 1;
+            text-align: center;
+        }
+        .about-image img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        /* --- Mission / Vision Cards --- */
+        .mission-section {
+            margin: 60px 0;
+            text-align: center;
+        }
+        .mission-section h2 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            font-weight: 800;
+        }
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .mission-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: 0.3s;
+            border-top: 5px solid var(--primary-color);
+        }
+        .mission-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        .mission-icon {
+            width: 70px;
+            height: 70px;
+            background: #f0e6f7;
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            margin: 0 auto 20px;
+        }
+        .mission-card h3 {
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+        .mission-card p {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        /* --- Footer --- */
+        .footer { background: #1a1a2e; color: #bdc3c7; padding: 70px 0 30px; margin-top: 50px; }
+        .footer-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; max-width: 1150px; margin: 0 auto; padding: 0 20px; }
+        .footer-col h4 { font-size: 1.3rem; color: white; margin-bottom: 25px; position: relative; padding-bottom: 10px; }
+        .footer-col h4::after { content: ''; position: absolute; left: 0; bottom: 0; width: 50px; height: 3px; background: var(--accent-color); }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 12px; }
+        .footer-col a { color: #bdc3c7; text-decoration: none; transition: 0.3s; display: block; }
+        .footer-col a:hover { color: var(--accent-color); padding-left: 5px; }
+        .footer-logo-box img { width: 100px; background: white; padding: 8px; border-radius: 8px; margin-bottom: 20px; }
+        .footer-bottom { text-align: center; margin-top: 50px; padding-top: 25px; border-top: 1px solid #2c3e50; font-size: 14px; }
+
+        @media (max-width: 900px) {
+            .about-wrapper { flex-direction: column; padding: 30px 20px; }
+            .about-image { display: none; } /* Hide image on smaller screens to focus on text */
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .menu-icon { display: block; }
+            .about-hero h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="nav-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/ACS_Future_School_logo_photo.webp" alt="ACS Future School Logo">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About Us</a> 
+                <div class="dropdown">
+                    <a href="courses.html">Academic Program</a> 
+                    <div class="dropdown-content">
+                        <a href="class6.html">Class 6</a>
+                        <a href="class7.html">Class 7</a>
+                        <a href="class8.html">Class 8</a>
+                        <a href="class9.html">Class 9</a>
+                        <a href="class10.html">Class 10</a>
+                    </div>
+                </div>
+                <a href="acs-ssc-27-frb.html">SSC 27 FRB</a>
+                <a href="quiz.html" style="color: var(--accent-color);">Installment (কিস্তি)</a>
+                <a href="Contact.html">Contact</a>
+            </nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div></div><div></div><div></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Side Menu (Mobile) -->
+    <div class="side-menu" id="sideMenu">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; border-bottom: 1px solid #eee;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/ACS_Future_School_logo_photo.webp" alt="Logo" width="70">
+            <span style="font-size: 24px; cursor: pointer;" onclick="closeMenu()">✖</span>
+        </div>
+        <nav class="side-menu-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html" style="color: var(--primary-color);">About Us</a>
+            <div class="accordion">
+                <a href="#" class="accordion-toggle">Academic Program</a>
+                <div class="accordion-content">
+                    <a href="class6.html">Class 6</a>
+                    <a href="class7.html">Class 7</a>
+                    <a href="class8.html">Class 8</a>
+                    <a href="class9.html">Class 9</a>
+                    <a href="class10.html">Class 10</a>
+                </div>
+            </div>
+            <a href="acs-ssc-27-frb.html">SSC 27 FRB</a>
+            <a href="quiz.html" style="color: var(--accent-color);">কিস্তিতে ভর্তি</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <main class="container">
+        
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <h1>আমাদের সম্পর্কে জানুন</h1>
+            <p>শিক্ষার্থীদের উজ্জ্বল ভবিষ্যৎ গড়ার লক্ষ্যে আমরা কাজ করে যাচ্ছি ACS Future School-এর সাথে কাঁধ মিলিয়ে।</p>
+        </section>
+
+        <!-- Main About Content -->
+        <section class="about-wrapper">
+            <div class="about-text">
+                <h2>স্বাগতম!</h2>
+                <p>আপনাকে এই ওয়েবসাইটে স্বাগতম জানাচ্ছি। আমি <strong>ACS Future School</strong>-এর একজন গর্বিত এবং <strong>অফিশিয়াল অ্যাফিলিয়েট পার্টনার (Official Affiliate Partner)</strong>। আমার মূল লক্ষ্য হলো দেশসেরা এই ই-লার্নিং প্ল্যাটফর্মের দারুণ সব কোর্স এবং এক্সক্লুসিভ ডিসকাউন্টগুলো শিক্ষার্থীদের কাছে সহজভাবে পৌঁছে দেওয়া।</p>
+                
+                <div class="highlight-box">
+                    <p><i class="fas fa-handshake"></i> "আমার দেওয়া লিংকের মাধ্যমে ভর্তি হলে শিক্ষার্থীরা পাচ্ছেন স্পেশাল Agent Discount এবং Early Bird অফার!"</p>
+                </div>
+
+                <p>পড়াশোনার ক্ষেত্রে সঠিক গাইডলাইন এবং ভালো মেন্টর পাওয়াটা প্রতিটি শিক্ষার্থীর অধিকার। ACS Future School সেই অধিকার নিশ্চিত করতেই কাজ করে যাচ্ছে বুয়েট, ঢাকা বিশ্ববিদ্যালয় এবং স্বনামধন্য মেডিকেল কলেজের শিক্ষকদের নিয়ে। আর আমি আপনাদের সাহায্য করছি সঠিক কোর্সটি বেছে নিতে, কিস্তির সুবিধাগুলো বুঝতে এবং সবচেয়ে সাশ্রয়ী মূল্যে এনরোলমেন্ট সম্পূর্ণ করতে।</p>
+            </div>
+            
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Students studying together online">
+            </div>
+        </section>
+
+        <!-- Mission & Values Section -->
+        <section class="mission-section">
+            <h2>আমার মূল লক্ষ্য ও উদ্দেশ্য</h2>
+            
+            <div class="mission-grid">
+                <!-- Card 1 -->
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <h3>সঠিক গাইডলাইন</h3>
+                    <p>একজন শিক্ষার্থী কোন শ্রেণিতে পড়ছে এবং তার জন্য কোন কোর্সটি (যেমন: Full Year, Half Year বা FRB) সবচেয়ে বেশি ফলপ্রসূ হবে, সেই কনফিউশন দূর করে সঠিক গাইডলাইন প্রদান করা।</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="mission-card" style="border-top-color: var(--accent-color);">
+                    <div class="mission-icon" style="background: #fff3e0; color: var(--accent-color);">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>সর্বোচ্চ ডিসকাউন্ট</h3>
+                    <p>আমার ওয়েবসাইটের প্রোভাইড করা লিংকগুলোর মাধ্যমে ভর্তি হলে শিক্ষার্থীরা পাচ্ছেন অফিসিয়াল <strong>Agent Discount</strong>। এর ফলে পড়াশোনার খরচ অনেকটাই কমে আসবে।</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="mission-card" style="border-top-color: var(--secondary-color);">
+                    <div class="mission-icon" style="background: #e8f5e9; color: var(--secondary-color);">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>সার্বক্ষণিক সাপোর্ট</h3>
+                    <p>ভর্তি প্রক্রিয়া, কিস্তি (Installment) সিস্টেম বোঝা কিংবা পেমেন্ট সংক্রান্ত যেকোনো সমস্যায় আমি WhatsApp-এর মাধ্যমে সরাসরি এবং তাৎক্ষণিক সাপোর্ট দিয়ে থাকি।</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo-box">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/ACS_Future_School_logo_photo.webp" alt="ACS Logo">
+                </div>
+                <p style="font-size: 14px;">আমরা গড়ছি আগামীর বাংলাদেশ। আধুনিক শিক্ষা ও প্রযুক্তির সমন্বয়ে আপনার সন্তানের উজ্জ্বল ভবিষ্যৎ নিশ্চিত করাই আমাদের লক্ষ্য।</p>
+            </div>
+            <div class="footer-col">
+                <h4>একাডেমিক প্রোগ্রাম</h4>
+                <ul>
+                    <li><a href="class6.html">ষষ্ঠ থেকে অষ্টম শ্রেণি</a></li>
+                    <li><a href="class9.html">নবম শ্রেণির বিজ্ঞান</a></li>
+                    <li><a href="class10.html">SSC 2026 প্রস্তুতি</a></li>
+                    <li><a href="acs-ssc-27-frb.html">SSC 27 FRB</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>গুরুত্বপূর্ণ লিংকস</h4>
+                <ul>
+                    <li><a href="index.html">হোম পেইজ</a></li>
+                    <li><a href="about.html" style="color: white;">আমাদের সম্পর্কে</a></li>
+                    <li><a href="faq.html">FAQ (প্রশ্নাবলী)</a></li> 
+                    <li><a href="quiz.html" style="color: var(--accent-color); font-weight: bold;">কিস্তিতে ভর্তি</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>সাপোর্ট ও যোগাযোগ</h4>
+                <ul>
+                    <li><a href="Policy.html">প্রাইভেসি পলিসি</a></li>
+                    <li><a href="https://wa.me/8801778682815">হেল্পলাইন (WhatsApp)</a></li>
+                    <li><a href="Contact.html">যোগাযোগ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ACS Future School Affiliate. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script for Mobile Menu -->
+    <script>
+        const sideMenu = document.getElementById("sideMenu");
+        const overlay = document.getElementById("menuOverlay");
+
+        function toggleMenu() { 
+            sideMenu.classList.add("active"); 
+            overlay.classList.add("active"); 
+        }
+        
+        function closeMenu() { 
+            sideMenu.classList.remove("active"); 
+            overlay.classList.remove("active"); 
+        }
+        
+        overlay.addEventListener('click', closeMenu);
+
+        // Mobile Accordion
+        document.querySelectorAll('.accordion-toggle').forEach(item => {
+            item.addEventListener('click', event => {
+                event.preventDefault();
+                const content = item.nextElementSibling;
+                item.classList.toggle('active');
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                } 
+            });
+        });
+    </script>
+
+</body>
+</html>
